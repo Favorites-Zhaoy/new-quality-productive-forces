@@ -1,0 +1,51 @@
+{
+  "meta": {
+    "id": "maddison_gdp",
+    "title": "世界人均 GDP（公元 1 年—2022 年）",
+    "source": "Maddison Project Database 2023（Bolt & van Zanden）",
+    "url": "https://www.rug.nl/ggdc/historicaldevelopment/maddison/releases/maddison-project-database-2023",
+    "status": "demo",
+    "unit": "2011 年国际元",
+    "note": "当前为按 MPD 世界汇总序列整理的近似值，用于搭建图表；正式版需下载原表替换。",
+    "usedIn": "1.1 两千年里的“曲棍球棒”"
+  },
+  "eras": [
+    { "key": "manual",  "name": "手工劳动",       "start": 1,    "end": 1760, "color": "--c-ochre" },
+    { "key": "machine", "name": "机械化·电气化",  "start": 1760, "end": 1946, "color": "--c-teal" },
+    { "key": "digital", "name": "数字化",         "start": 1946, "end": 2012, "color": "--c-blue" },
+    { "key": "ai",      "name": "智能化",         "start": 2012, "end": 2022, "color": "--c-red" }
+  ],
+  "annotations": [
+    { "year": 1769, "text": "瓦特改良蒸汽机" },
+    { "year": 1913, "text": "福特流水线" },
+    { "year": 1946, "text": "ENIAC 问世" },
+    { "year": 1991, "text": "万维网" },
+    { "year": 2012, "text": "深度学习突破" }
+  ],
+  "data": [
+    { "year": 1,    "value": 1050 },
+    { "year": 1000, "value": 1000 },
+    { "year": 1300, "value": 1080 },
+    { "year": 1500, "value": 1120 },
+    { "year": 1600, "value": 1150 },
+    { "year": 1700, "value": 1150 },
+    { "year": 1760, "value": 1160 },
+    { "year": 1820, "value": 1180 },
+    { "year": 1850, "value": 1260 },
+    { "year": 1870, "value": 1500 },
+    { "year": 1890, "value": 1850 },
+    { "year": 1913, "value": 2700 },
+    { "year": 1929, "value": 3200 },
+    { "year": 1938, "value": 3400 },
+    { "year": 1950, "value": 3350 },
+    { "year": 1960, "value": 4400 },
+    { "year": 1970, "value": 5800 },
+    { "year": 1980, "value": 7200 },
+    { "year": 1990, "value": 8200 },
+    { "year": 2000, "value": 9900 },
+    { "year": 2010, "value": 13200 },
+    { "year": 2015, "value": 14500 },
+    { "year": 2018, "value": 15200 },
+    { "year": 2022, "value": 16200 }
+  ]
+}

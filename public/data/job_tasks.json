@@ -1,0 +1,54 @@
+{
+  "meta": {
+    "id": "job_tasks",
+    "title": "职业任务拆解：替代 / 增强 / 保留",
+    "source": "本项目情景设定，分类思路参考 ILO（2025）任务级暴露评估与 Eloundou et al.（2023）",
+    "url": "https://arxiv.org/abs/2303.10130",
+    "status": "demo",
+    "note": "任务权重（工作时间占比）与分类为演示设定。正式版可替换为 ILO 职业暴露指数或 O*NET 任务数据。",
+    "usedIn": "5.2 未来工作模拟器"
+  },
+  "types": {
+    "replace": { "name": "替代", "color": "--c-red",   "desc": "AI 可以基本独立完成" },
+    "augment": { "name": "增强", "color": "--c-blue",  "desc": "人主导，AI 显著提效" },
+    "keep":    { "name": "保留", "color": "--c-ochre", "desc": "依赖人际、身体或价值判断" }
+  },
+  "jobs": [
+    { "name": "程序员", "children": [
+      { "name": "编码", "children": [ { "name": "写样板代码", "w": 15, "t": "replace" }, { "name": "实现业务逻辑", "w": 15, "t": "augment" }, { "name": "调试排错", "w": 10, "t": "augment" } ] },
+      { "name": "设计", "children": [ { "name": "系统架构", "w": 10, "t": "keep" }, { "name": "技术选型", "w": 5, "t": "augment" } ] },
+      { "name": "质量", "children": [ { "name": "写单元测试", "w": 8, "t": "replace" }, { "name": "代码评审", "w": 7, "t": "augment" } ] },
+      { "name": "协作", "children": [ { "name": "需求沟通", "w": 12, "t": "keep" }, { "name": "写文档", "w": 8, "t": "replace" }, { "name": "带新人", "w": 10, "t": "keep" } ] }
+    ]},
+    { "name": "教师", "children": [
+      { "name": "备课", "children": [ { "name": "搜集素材", "w": 10, "t": "replace" }, { "name": "设计教学活动", "w": 12, "t": "augment" }, { "name": "制作课件", "w": 8, "t": "augment" } ] },
+      { "name": "授课", "children": [ { "name": "课堂讲授", "w": 20, "t": "keep" }, { "name": "课堂互动", "w": 10, "t": "keep" } ] },
+      { "name": "评价", "children": [ { "name": "批改客观题", "w": 8, "t": "replace" }, { "name": "批改作文", "w": 7, "t": "augment" }, { "name": "学情分析", "w": 5, "t": "augment" } ] },
+      { "name": "育人", "children": [ { "name": "个别辅导", "w": 10, "t": "keep" }, { "name": "家校沟通", "w": 5, "t": "augment" }, { "name": "班级管理", "w": 5, "t": "keep" } ] }
+    ]},
+    { "name": "医生", "children": [
+      { "name": "诊断", "children": [ { "name": "问诊", "w": 18, "t": "keep" }, { "name": "影像阅片", "w": 12, "t": "augment" }, { "name": "检验结果解读", "w": 8, "t": "augment" } ] },
+      { "name": "治疗", "children": [ { "name": "制定方案", "w": 12, "t": "augment" }, { "name": "手术操作", "w": 15, "t": "keep" } ] },
+      { "name": "文书", "children": [ { "name": "写病历", "w": 12, "t": "replace" }, { "name": "填报表", "w": 5, "t": "replace" } ] },
+      { "name": "沟通", "children": [ { "name": "医患沟通", "w": 10, "t": "keep" }, { "name": "科研学习", "w": 8, "t": "augment" } ] }
+    ]},
+    { "name": "会计", "children": [
+      { "name": "核算", "children": [ { "name": "凭证录入", "w": 18, "t": "replace" }, { "name": "对账", "w": 12, "t": "replace" }, { "name": "报表编制", "w": 10, "t": "augment" } ] },
+      { "name": "税务", "children": [ { "name": "纳税申报", "w": 8, "t": "replace" }, { "name": "税务筹划", "w": 8, "t": "augment" } ] },
+      { "name": "分析", "children": [ { "name": "财务分析", "w": 14, "t": "augment" }, { "name": "预算管理", "w": 8, "t": "augment" } ] },
+      { "name": "沟通", "children": [ { "name": "业务沟通", "w": 12, "t": "keep" }, { "name": "内控审核", "w": 10, "t": "keep" } ] }
+    ]},
+    { "name": "设计师", "children": [
+      { "name": "创意", "children": [ { "name": "理解需求", "w": 12, "t": "keep" }, { "name": "概念构思", "w": 14, "t": "augment" } ] },
+      { "name": "制作", "children": [ { "name": "素材搜集", "w": 10, "t": "replace" }, { "name": "出图与排版", "w": 16, "t": "augment" }, { "name": "多尺寸改图", "w": 10, "t": "replace" } ] },
+      { "name": "迭代", "children": [ { "name": "方案提案", "w": 10, "t": "keep" }, { "name": "根据反馈改稿", "w": 12, "t": "augment" } ] },
+      { "name": "管理", "children": [ { "name": "品牌规范维护", "w": 6, "t": "augment" }, { "name": "与开发对接", "w": 10, "t": "keep" } ] }
+    ]},
+    { "name": "记者", "children": [
+      { "name": "采集", "children": [ { "name": "现场采访", "w": 18, "t": "keep" }, { "name": "资料检索", "w": 10, "t": "replace" }, { "name": "数据核实", "w": 10, "t": "augment" } ] },
+      { "name": "写作", "children": [ { "name": "快讯撰写", "w": 10, "t": "replace" }, { "name": "深度报道", "w": 16, "t": "augment" }, { "name": "标题与摘要", "w": 6, "t": "replace" } ] },
+      { "name": "呈现", "children": [ { "name": "配图与可视化", "w": 10, "t": "augment" }, { "name": "音视频剪辑", "w": 8, "t": "augment" } ] },
+      { "name": "判断", "children": [ { "name": "选题策划", "w": 12, "t": "keep" } ] }
+    ]}
+  ]
+}

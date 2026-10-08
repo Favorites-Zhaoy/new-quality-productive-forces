@@ -1,0 +1,42 @@
+{
+  "meta": {
+    "id": "impact_stats",
+    "title": "AI 对生产力的整体影响 · 关键数字",
+    "source": "Peng et al. 2023；Brynjolfsson et al.；国家数据局《全国数据资源调查报告（2024 年）》；中国信通院《中国数字经济发展研究报告（2024 年）》；AlphaFold DB；CNNIC《生成式人工智能应用发展报告（2025）》",
+    "url": "",
+    "status": "check",
+    "note": "每个数字均需回到原始报告核对口径与年份；个别条目对应的统计口径可能已在新版报告中更新。",
+    "usedIn": "第四章 · 蓝色数据版块"
+  },
+  "title": "人工智能 · 新质生产力效益",
+  "groups": [
+    {
+      "name": "提升生产效率",
+      "stats": [
+        { "num": "55.8", "unit": "%", "label": "使用 AI 编程助手完成任务的速度提升（对照实验）", "status": "check" },
+        { "num": "34", "unit": "%", "label": "新手客服在 AI 辅助下每小时解决问题数提升", "status": "check" }
+      ]
+    },
+    {
+      "name": "激活生产要素",
+      "stats": [
+        { "num": "41.06", "unit": "ZB", "label": "2024 年全国数据生产总量", "status": "check" },
+        { "num": "42.8", "unit": "%", "label": "2023 年数字经济规模占 GDP 比重", "status": "check" }
+      ]
+    },
+    {
+      "name": "重塑知识生产",
+      "stats": [
+        { "num": "2", "unit": "亿+", "label": "AlphaFold 数据库中的蛋白质结构预测", "status": "check" },
+        { "num": "2024", "unit": "年", "label": "蛋白质结构预测相关研究获诺贝尔化学奖", "status": "ok" }
+      ]
+    },
+    {
+      "name": "优化产业结构",
+      "stats": [
+        { "num": "5.15", "unit": "亿人", "label": "生成式人工智能用户规模（截至 2025 年 6 月）", "status": "check" },
+        { "num": "20", "unit": "个门类", "label": "AI 应用已覆盖国民经济全部行业门类（第三章展开）", "status": "demo" }
+      ]
+    }
+  ]
+}

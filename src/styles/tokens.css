@@ -1,0 +1,54 @@
+/* =========================================================
+   设计变量
+   配色：鲜艳色相 + 低饱和度（参考报纸套色印刷的“褪色感”）
+   ========================================================= */
+:root {
+  /* 纸张 */
+  --paper:      #ECEAE4;
+  --paper-2:    #F4F2ED;   /* 卡片、浮层 */
+  --paper-3:    #E1DED6;   /* 分隔区、轨道 */
+  --paper-4:    #D3CFC5;
+
+  /* 油墨 */
+  --ink:        #22303C;   /* 主文字：深青墨 */
+  --ink-2:      #4B5865;   /* 次级文字 */
+  --ink-3:      #858F98;   /* 注释 */
+  --rule:       rgba(34, 48, 60, .16);
+  --rule-strong:rgba(34, 48, 60, .55);
+
+  /* 套色（低饱和） */
+  --c-red:      #BF5A45;   /* 报头红 */
+  --c-red-soft: #E6BCB0;
+  --c-blue:     #5785AA;   /* 版面蓝 */
+  --c-blue-deep:#2F5573;
+  --c-blue-soft:#BFD3E3;
+  --c-blue-wash:#D7E4EE;
+  --c-teal:     #5E9C8F;
+  --c-ochre:    #C99A4B;
+  --c-green:    #84A36C;
+  --c-violet:   #8B7DAA;
+  --c-rose:     #CD8C86;
+
+  /* 分类色序列（图表用） */
+  --series-1: var(--c-red);
+  --series-2: var(--c-blue);
+  --series-3: var(--c-teal);
+  --series-4: var(--c-ochre);
+  --series-5: var(--c-violet);
+  --series-6: var(--c-green);
+
+  /* 字体 */
+  --f-serif: "Noto Serif SC", "Songti SC", "SimSun", serif;
+  --f-sans:  "Noto Sans SC", "PingFang SC", "Microsoft YaHei", sans-serif;
+  --f-brush: "Ma Shan Zheng", "STXingkai", cursive;
+  --f-roman: "Cinzel", "Times New Roman", serif;
+  --f-mono:  "IBM Plex Mono", ui-monospace, monospace;
+
+  /* 尺寸 */
+  --gutter: clamp(16px, 4vw, 56px);
+  --maxw: 1320px;
+  --topbar-h: 52px;
+  --radius: 14px;
+
+  --ease-out: cubic-bezier(.16, 1, .3, 1);
+}

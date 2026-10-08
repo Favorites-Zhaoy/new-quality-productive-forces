@@ -1,0 +1,307 @@
+{
+ "meta": {
+  "id": "ind_R",
+  "title": "R 文化、体育和娱乐业",
+  "source": "国家统计局、CNNIC、新华网、中国网络视听协会（各图另附来源）",
+  "url": "",
+  "status": "src",
+  "note": "AIGC 使用时长数据来源为 QuestMobile（经 CNNIC 引用）；文化新业态为规上口径，与全口径不可混用。",
+  "usedIn": "第三章 · R"
+ },
+ "lede": "生成式 AI 让“人人都是创作者”成为可能：从 AI 漫剧到 AI 微短剧，文化生产的成本与周期正在被重写。",
+ "headline": {
+  "value": "176.7",
+  "unit": "%",
+  "label": "2025 年 12 月 AIGC 类应用总使用时长同比增速，居移动互联网各细分行业之首",
+  "source": "CNNIC 第 57 次《中国互联网络发展状况统计报告》（数据来源 QuestMobile）",
+  "url": "https://www.cnnic.cn/NMediaFile/2026/0304/MAIN1772588317069TUXN3827X8.pdf"
+ },
+ "change": {
+  "text": "以数字内容为代表的文化新业态营收占规上文化企业的比重升至 44.9%；AI 介入后，漫剧单分钟制作成本约降一半。",
+  "charts": [
+   {
+    "viz": "stack",
+    "span": 2,
+    "height": 340,
+    "title": "规上文化企业营收：新业态的份额越来越大",
+    "unit": "亿元",
+    "keys": [
+     {
+      "key": "nf",
+      "name": "文化新业态 16 个行业小类",
+      "color": "--c-red"
+     },
+     {
+      "key": "other",
+      "name": "其他规上文化企业",
+      "color": "--c-blue-soft"
+     }
+    ],
+    "data": [
+     {
+      "x": 2021,
+      "nf": 39623,
+      "other": 79441
+     },
+     {
+      "x": 2022,
+      "nf": 43860,
+      "other": 77945
+     },
+     {
+      "x": 2023,
+      "nf": 52395,
+      "other": 77120
+     },
+     {
+      "x": 2024,
+      "nf": 59082,
+      "other": 82428
+     },
+     {
+      "x": 2025,
+      "nf": 68253,
+      "other": 83882
+     }
+    ],
+    "source": "国家统计局 全国规模以上文化及相关产业企业营业收入数据",
+    "url": "https://www.stats.gov.cn/sj/zxfb/202601/t20260130_1962411.html",
+    "note": "新业态占比：40.5%（2023）→ 44.9%（2025）；“其他”为总额减算。"
+   },
+   {
+    "viz": "rank",
+    "title": "2025.12 各类 App 使用时长净增量 TOP10",
+    "unit": "亿小时",
+    "highlight": [
+     "AIGC"
+    ],
+    "data": [
+     {
+      "label": "短视频",
+      "value": 94.3,
+      "note": null
+     },
+     {
+      "label": "长视频",
+      "value": 37.3,
+      "note": null
+     },
+     {
+      "label": "即时通讯",
+      "value": 21.1,
+      "note": null
+     },
+     {
+      "label": "综合电商",
+      "value": 11.0,
+      "note": null
+     },
+     {
+      "label": "社区交友",
+      "value": 7.0,
+      "note": null
+     },
+     {
+      "label": "支付结算",
+      "value": 6.0,
+      "note": null
+     },
+     {
+      "label": "在线阅读",
+      "value": 5.9,
+      "note": null
+     },
+     {
+      "label": "AIGC",
+      "value": 5.1,
+      "note": "同比增速 176.7%，居各行业之首"
+     },
+     {
+      "label": "有声听书",
+      "value": 4.8,
+      "note": null
+     },
+     {
+      "label": "地图导航",
+      "value": 3.2,
+      "note": null
+     }
+    ],
+    "sort": false,
+    "source": "CNNIC 第 57 次报告（QuestMobile）",
+    "url": "https://www.cnnic.cn/NMediaFile/2026/0304/MAIN1772588317069TUXN3827X8.pdf",
+    "note": "AIGC 净增量排第 8，但增速第 1。"
+   },
+   {
+    "viz": "compare",
+    "title": "AI 介入前后，漫剧单分钟制作成本",
+    "rowH": 78,
+    "data": [
+     {
+      "label": "区间上限",
+      "before": 5000,
+      "after": 2500,
+      "unit": "元/分钟",
+      "beforeLabel": "传统",
+      "afterLabel": "AI 介入后"
+     },
+     {
+      "label": "区间下限",
+      "before": 2000,
+      "after": 1000,
+      "unit": "元/分钟",
+      "beforeLabel": "传统",
+      "afterLabel": "AI 介入后"
+     }
+    ],
+    "source": "新华网《新华网科技观察丨当 AI 遇到漫剧》",
+    "url": "https://www.news.cn/tech/20260109/b6cc8c12b74247709da1f6a0035cea8c/c.html",
+    "note": "同文称部分环节效率提升 50%—80%，制作周期从数年缩短至数周。"
+   },
+   {
+    "viz": "rank",
+    "title": "生成式 AI 用来做什么（2025.12，多选）",
+    "unit": "%",
+    "unitShort": "%",
+    "data": [
+     {
+      "label": "回答问题",
+      "value": 76.0
+     },
+     {
+      "label": "生成处理图片/视频",
+      "value": 47.8
+     },
+     {
+      "label": "生成处理文本",
+      "value": 37.6
+     },
+     {
+      "label": "工作总结/会议纪要/PPT",
+      "value": 32.5
+     }
+    ],
+    "source": "CNNIC 第 57 次报告",
+    "url": "https://www.cnnic.cn/NMediaFile/2026/0304/MAIN1772588317069TUXN3827X8.pdf",
+    "note": "占生成式 AI 用户比例。"
+   },
+   {
+    "viz": "stats",
+    "title": "网络视听新业态",
+    "data": [
+     {
+      "value": "6.64",
+      "unit": "亿人",
+      "label": "微短剧用户规模（2025.12）"
+     },
+     {
+      "value": "10.74",
+      "unit": "亿人",
+      "label": "短视频用户规模（2025.12）"
+     },
+     {
+      "value": "1000",
+      "unit": "亿元+",
+      "label": "微短剧市场规模（2025 年突破千亿元）"
+     }
+    ],
+    "source": "CNNIC 第 57 次报告；中国网络视听协会（转载光明日报）",
+    "url": "https://www.cnnic.cn/NMediaFile/2026/0304/MAIN1772588317069TUXN3827X8.pdf"
+   }
+  ]
+ },
+ "cases": [
+  {
+   "date": "2026-01",
+   "title": "AI漫剧：成本减半、周期从数年缩至数周",
+   "entity": "阅文集团、知乎盐言故事、酱油动漫等",
+   "summary": "AI 技术进入漫剧生产，单分钟成本由2000-5000元降至1000-2500元，部分环节效率提升50%-80%。2025年上半年漫剧供给量以83%的复合增长率扩容；阅文已有80部漫剧播放量破千万，知乎盐言故事改编漫剧累计播放量突破10亿。",
+   "figures": [
+    {
+     "label": "单分钟制作成本降幅",
+     "value": "约50%"
+    },
+    {
+     "label": "部分环节效率提升",
+     "value": "50%-80%"
+    },
+    {
+     "label": "2025上半年漫剧供给量复合增长率",
+     "value": "83%"
+    },
+    {
+     "label": "阅文播放量破千万的漫剧",
+     "value": "80部"
+    }
+   ],
+   "source": "新华网",
+   "url": "https://www.news.cn/tech/20260109/b6cc8c12b74247709da1f6a0035cea8c/c.html"
+  },
+  {
+   "date": "2026-09",
+   "title": "全国首部闽宁协作主题AI微短剧《海上渔歌》上线",
+   "entity": "福建省委宣传部指导，福建省广电局、福建省广播影视集团联合摄制",
+   "summary": "这部AI微短剧取材于宁夏盐碱地“海鱼陆养”的真实实践，共42集，9月6日起在海博TV、抖音、爱奇艺、红果短剧等平台陆续上线，持福建省首个新版微短剧上线备案号，被业内视为人工智能赋能主旋律传播的创新范例。",
+   "figures": [
+    {
+     "label": "集数",
+     "value": "42集"
+    },
+    {
+     "label": "上线日期",
+     "value": "2026-09-06"
+    }
+   ],
+   "source": "中国网络视听节目服务协会网站（来源：福建省广播电视局）",
+   "url": "http://www.cnsa.cn/art/2026/9/10/art_1955_49285.html"
+  },
+  {
+   "date": "2025-12",
+   "title": "上海文旅智能体“沪小游”成为一站式信息服务总入口",
+   "entity": "上海市",
+   "summary": "“沪小游”为游客提供AI定制行程、AIGC游记生成等服务，已对接4.5万余项文旅资源，累计服务用户约1300万人次。",
+   "figures": [
+    {
+     "label": "对接文旅资源",
+     "value": "4.5万余项"
+    },
+    {
+     "label": "累计服务用户",
+     "value": "约1300万人次"
+    }
+   ],
+   "source": "CNNIC 第57次报告（引新华网2025-12-30）",
+   "url": "https://www.news.cn/20251230/b91293e4a1394515bfcb94a9bb4eb03f/c.html"
+  },
+  {
+   "date": "2026-09",
+   "title": "微短剧市场规模突破千亿元",
+   "entity": "国家广播电视总局 / 中国社会科学院新闻与传播研究所",
+   "summary": "中国社科院新闻所发布的短剧报告引用数据称：QuestMobile数据显示截至2026年2月短剧行业月活用户规模达7.18亿；国家广播电视总局披露，2025年中国微短剧市场规模已突破千亿元。",
+   "figures": [
+    {
+     "label": "2025年微短剧市场规模",
+     "value": "突破千亿元"
+    },
+    {
+     "label": "短剧行业月活（2026年2月）",
+     "value": "7.18亿"
+    }
+   ],
+   "source": "中国网络视听节目服务协会网站转载光明日报客户端",
+   "url": "http://www.cnsa.cn/art/2026/9/3/art_1955_49262.html"
+  }
+ ],
+ "future": [
+  {
+   "text": "推动人工智能在繁荣文化生产、增强文化传播、促进文化交流中展现更大作为，利用人工智能辅助创作更多具有中华文化元素和标识的文化内容，壮大文化产业。",
+   "source": "国务院《关于深入实施“人工智能+”行动的意见》（国发〔2025〕11号）",
+   "url": "https://www.gov.cn/zhengce/content/202508/content_7037861.htm"
+  },
+  {
+   "text": "提升文娱等生活服务品质，拓展体验消费、个性消费、认知和情感消费等服务消费新场景。",
+   "source": "国务院《关于深入实施“人工智能+”行动的意见》（国发〔2025〕11号）",
+   "url": "https://www.gov.cn/zhengce/content/202508/content_7037861.htm"
+  }
+ ]
+}

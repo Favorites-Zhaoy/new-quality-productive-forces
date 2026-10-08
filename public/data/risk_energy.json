@@ -1,0 +1,19 @@
+{
+  "meta": {
+    "id": "risk_energy",
+    "title": "全球数据中心用电量",
+    "source": "IEA《Energy and AI》（2025）基准情景",
+    "url": "https://www.iea.org/reports/energy-and-ai",
+    "status": "check",
+    "unit": "TWh",
+    "note": "需核对报告中 2024 年估算值与 2030 年基准情景预测值。",
+    "usedIn": "4.2 风险：能源消耗"
+  },
+  "title": "能源消耗",
+  "lede": "AI 训练与推理推高了数据中心的电力需求。",
+  "data": [
+    { "label": "2024", "value": 415 },
+    { "label": "2030（预测）", "value": 945 }
+  ],
+  "compare": { "label": "约相当于日本当前全年用电量", "value": 945 }
+}

@@ -1,0 +1,153 @@
+{
+  "meta": {
+    "id": "industries",
+    "title": "国民经济行业分类 · 20 个门类",
+    "source": "GB/T 4754—2017《国民经济行业分类》",
+    "url": "https://www.stats.gov.cn/xxgk/tjbz/gjtjbz/201710/t20171017_1758922.html",
+    "status": "ok",
+    "note": "三次产业归属依据国家统计局《三次产业划分规定》，农林牧渔专业及辅助性活动等细项未单独区分。",
+    "usedIn": "第三章 行业罗盘 · 4.1 影响矩阵"
+  },
+  "data": [
+    {
+      "code": "A",
+      "name": "农、林、牧、渔业",
+      "short": "农林牧渔",
+      "sector": 1,
+      "glyph": "农"
+    },
+    {
+      "code": "B",
+      "name": "采矿业",
+      "short": "采矿",
+      "sector": 2,
+      "glyph": "矿"
+    },
+    {
+      "code": "C",
+      "name": "制造业",
+      "short": "制造",
+      "sector": 2,
+      "glyph": "造"
+    },
+    {
+      "code": "D",
+      "name": "电力、热力、燃气及水生产和供应业",
+      "short": "电力燃气水",
+      "sector": 2,
+      "glyph": "电"
+    },
+    {
+      "code": "E",
+      "name": "建筑业",
+      "short": "建筑",
+      "sector": 2,
+      "glyph": "建"
+    },
+    {
+      "code": "F",
+      "name": "批发和零售业",
+      "short": "批发零售",
+      "sector": 3,
+      "glyph": "商"
+    },
+    {
+      "code": "G",
+      "name": "交通运输、仓储和邮政业",
+      "short": "交通运输",
+      "sector": 3,
+      "glyph": "运"
+    },
+    {
+      "code": "H",
+      "name": "住宿和餐饮业",
+      "short": "住宿餐饮",
+      "sector": 3,
+      "glyph": "食"
+    },
+    {
+      "code": "I",
+      "name": "信息传输、软件和信息技术服务业",
+      "short": "信息技术",
+      "sector": 3,
+      "glyph": "信"
+    },
+    {
+      "code": "J",
+      "name": "金融业",
+      "short": "金融",
+      "sector": 3,
+      "glyph": "金"
+    },
+    {
+      "code": "K",
+      "name": "房地产业",
+      "short": "房地产",
+      "sector": 3,
+      "glyph": "房"
+    },
+    {
+      "code": "L",
+      "name": "租赁和商务服务业",
+      "short": "商务服务",
+      "sector": 3,
+      "glyph": "务"
+    },
+    {
+      "code": "M",
+      "name": "科学研究和技术服务业",
+      "short": "科学研究",
+      "sector": 3,
+      "glyph": "研"
+    },
+    {
+      "code": "N",
+      "name": "水利、环境和公共设施管理业",
+      "short": "水利环境",
+      "sector": 3,
+      "glyph": "水"
+    },
+    {
+      "code": "O",
+      "name": "居民服务、修理和其他服务业",
+      "short": "居民服务",
+      "sector": 3,
+      "glyph": "居"
+    },
+    {
+      "code": "P",
+      "name": "教育",
+      "short": "教育",
+      "sector": 3,
+      "glyph": "教"
+    },
+    {
+      "code": "Q",
+      "name": "卫生和社会工作",
+      "short": "卫生健康",
+      "sector": 3,
+      "glyph": "医"
+    },
+    {
+      "code": "R",
+      "name": "文化、体育和娱乐业",
+      "short": "文体娱乐",
+      "sector": 3,
+      "glyph": "文"
+    },
+    {
+      "code": "S",
+      "name": "公共管理、社会保障和社会组织",
+      "short": "公共管理",
+      "sector": 3,
+      "glyph": "政"
+    },
+    {
+      "code": "T",
+      "name": "国际组织",
+      "short": "国际组织",
+      "sector": 3,
+      "glyph": "合"
+    }
+  ]
+}

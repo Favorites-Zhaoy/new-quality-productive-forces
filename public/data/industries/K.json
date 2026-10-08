@@ -1,0 +1,256 @@
+{
+ "meta": {
+  "id": "ind_K",
+  "title": "K 房地产业",
+  "source": "国家统计局、贝壳与万物云财报、新华网（各图另附来源）",
+  "url": "",
+  "status": "src",
+  "note": "房地产业缺少官方 AI 专项统计，AI 指标主要为上市企业自报口径与新华社一线报道。",
+  "usedIn": "第三章 · K"
+ },
+ "lede": "新房销售面积连续下滑，行业从“盖房卖房”转向“存量运营”，AI 成为提升人效的关键工具。",
+ "headline": {
+  "value": "44",
+  "unit": "%",
+  "label": "贝壳租赁业务把 AI 嵌入收房、定价、出房全流程后，资管经理人效提升超 44%（月人均在管房源 90 余套 → 超 130 套）",
+  "source": "贝壳 2025 年第三季度财报（凤凰网财经）",
+  "url": "https://finance.ifeng.com/c/8oLtUswa1Pt"
+ },
+ "change": {
+  "text": "增量见顶之后，竞争转向效率。房产经纪与物业服务企业开始让 AI 承担定价、派单、巡检与客服。",
+  "charts": [
+   {
+    "viz": "bar",
+    "title": "背景：全国新建商品房销售面积",
+    "unit": "万平方米",
+    "data": [
+     {
+      "x": 2021,
+      "y": 179433
+     },
+     {
+      "x": 2022,
+      "y": 135837
+     },
+     {
+      "x": 2023,
+      "y": 111735
+     },
+     {
+      "x": 2024,
+      "y": 97385
+     },
+     {
+      "x": 2025,
+      "y": 88101
+     }
+    ],
+    "highlight": [
+     2021
+    ],
+    "source": "国家统计局 全国房地产市场基本情况",
+    "url": "https://www.thepaper.cn/newsDetail_forward_32414370",
+    "note": "行业背景数据，非 AI 指标。"
+   },
+   {
+    "viz": "compare",
+    "title": "贝壳：AI 应用前后的人效",
+    "rowH": 80,
+    "data": [
+     {
+      "label": "资管经理月人均在管房源",
+      "before": 90,
+      "after": 130,
+      "unit": "套",
+      "beforeLabel": "2024Q3",
+      "afterLabel": "2025Q3",
+      "delta": "+44%"
+     },
+     {
+      "label": "非链家经纪人人均二手单",
+      "before": 2,
+      "after": 3,
+      "unit": "单",
+      "beforeLabel": "2022（不足）",
+      "afterLabel": "2025（以上）"
+     },
+     {
+      "label": "试点区域收房人效（AI 前 = 100）",
+      "before": 100,
+      "after": 113,
+      "unit": "",
+      "beforeLabel": "AI 前",
+      "afterLabel": "AI 后",
+      "delta": "+13%"
+     }
+    ],
+    "source": "贝壳 2025 年三季度及全年业绩（凤凰网、中新网）",
+    "url": "https://www.chinanews.com/cj/2026/03-16/10587736.shtml",
+    "note": "原文为区间描述，取整示意。"
+   },
+   {
+    "viz": "compare",
+    "title": "物业工单平均响应时间（德商产投“德宝助手”）",
+    "rowH": 80,
+    "height": 100,
+    "data": [
+     {
+      "label": "覆盖超 100 个项目，累计处理工单超 50 万条",
+      "before": 30,
+      "after": 3,
+      "unit": "分钟",
+      "beforeLabel": "AI 前",
+      "afterLabel": "AI 后（以内）"
+     }
+    ],
+    "source": "新华网《AI 赋能千行百业一线观察｜AI 加速落地物业服务》",
+    "url": "https://www.news.cn/house/20260526/bb7fd155c7f64bff80321ceb0d2aae04/c.html"
+   },
+   {
+    "viz": "rank",
+    "title": "物业行业 AI 渗透：广而不深",
+    "unit": "%",
+    "unitShort": "%",
+    "sort": false,
+    "data": [
+     {
+      "label": "AI 整体渗透率",
+      "value": 60
+     },
+     {
+      "label": "深度赋能（上限）",
+      "value": 15
+     },
+     {
+      "label": "深度赋能（下限）",
+      "value": 10
+     }
+    ],
+    "highlight": [
+     "AI 整体渗透率"
+    ],
+    "source": "新华网（引述中指研究院、南都物业）",
+    "url": "https://www.news.cn/house/20260526/bb7fd155c7f64bff80321ceb0d2aae04/c.html",
+    "note": "业内专家判断，非官方统计。"
+   },
+   {
+    "viz": "stats",
+    "span": 2,
+    "title": "万物云：2025 年 AI 投入与效果",
+    "data": [
+     {
+      "value": "1400",
+      "unit": "个+",
+      "label": "年内上线 AI 智能体"
+     },
+     {
+      "value": "725",
+      "unit": "亿",
+      "label": "全年 Token 消耗"
+     },
+     {
+      "value": "10.1",
+      "unit": "%",
+      "label": "行政开支同比下降（约 2.0 亿元）"
+     },
+     {
+      "value": "36.5",
+      "unit": "%",
+      "label": "深圳总部部署“灵石”后每平米能耗降低"
+     }
+    ],
+    "source": "界面新闻据万物云 2025 年业绩",
+    "url": "https://m.jiemian.com/article/14145143.html"
+   }
+  ]
+ },
+ "cases": [
+  {
+   "date": "2025-11",
+   "title": "贝壳租赁：AI参与定价、库存调度，资管人效提升超44%",
+   "entity": "贝壳（KE Holdings）",
+   "summary": "贝壳将AI嵌入租赁收房、定价、审核、出房、运维全流程，通过AI算法动态调价、精准优惠和流量调配加速去化；经纪人端上线“来客”助手、AI房源维护助手等工具。",
+   "figures": [
+    {
+     "label": "资管经理月人均在管房源",
+     "value": "90余套→超130套（人效+44%以上）"
+    },
+    {
+     "label": "收房人效",
+     "value": "提升13%"
+    },
+    {
+     "label": "AI去化年化节省成本",
+     "value": "过亿元"
+    },
+    {
+     "label": "AI定价较人工定价招租成功率",
+     "value": "+5.3个百分点"
+    }
+   ],
+   "source": "凤凰网财经；中新网",
+   "url": "https://finance.ifeng.com/c/8oLtUswa1Pt"
+  },
+  {
+   "date": "2026-03",
+   "title": "万物云：上线超1400个AI智能体，9名“AI员工”转正",
+   "entity": "万物云（万科物业母公司）",
+   "summary": "万物云依托自研GC平台大规模部署AI智能体，重构中后台运营体系，2025年Token消耗725亿，行政开支同比下降约2亿元；“灵石”能源管理在深圳总部实现每平米能耗降低36.5%。",
+   "figures": [
+    {
+     "label": "AI智能体",
+     "value": "超1400个"
+    },
+    {
+     "label": "Token消耗（2025）",
+     "value": "725亿"
+    },
+    {
+     "label": "行政开支",
+     "value": "同比-10.1%（约2.0亿元）"
+    }
+   ],
+   "source": "界面新闻",
+   "url": "https://m.jiemian.com/article/14145143.html"
+  },
+  {
+   "date": "2026-05",
+   "title": "物业服务“AI上岗”：万科物业、南都物业、德商产投",
+   "entity": "万科物业、南都物业、德商产投",
+   "summary": "万科物业在3000多个小区部署智能服务器，自动识别电动车违停、老人摔倒、高空抛物等50余种场景并5秒内预警派单；南都物业AI外呼识别方言与情绪；德商产投“德宝助手”覆盖超100个项目。",
+   "figures": [
+    {
+     "label": "万科物业异常识别预警",
+     "value": "50余种场景，5秒内预警"
+    },
+    {
+     "label": "南都物业客服回访效率",
+     "value": "提升10倍以上"
+    },
+    {
+     "label": "德宝助手累计工单 / 响应时间",
+     "value": "超50万条 / 30分钟→3分钟以内"
+    }
+   ],
+   "source": "新华网",
+   "url": "https://www.news.cn/house/20260526/bb7fd155c7f64bff80321ceb0d2aae04/c.html"
+  }
+ ],
+ "future": [
+  {
+   "text": "拓展人工智能在“好房子”全生命周期的应用，积极构建更有温度的智能社会。",
+   "source": "国务院关于深入实施“人工智能+”行动的意见（国发〔2025〕11号）",
+   "url": "https://www.gov.cn/zhengce/content/202508/content_7037861.htm"
+  },
+  {
+   "text": "推进数字家庭建设，推动智能家居产品开发和互联互通，利用新一代信息技术提升住房智能化水平。",
+   "source": "住房和城乡建设部《关于提升住房品质的意见》（2025年12月），据人民网报道",
+   "url": "http://finance.people.com.cn/n1/2026/0316/c1004-40682971.html"
+  },
+  {
+   "text": "到2025年，基本构建起网格化管理、精细化服务、信息化支撑、开放共享的智慧社区服务平台，社区治理和服务智能化水平显著提高。",
+   "source": "民政部等9部门《关于深入推进智慧社区建设的意见》（2022年5月）",
+   "url": "http://society.people.com.cn/n1/2022/0521/c1008-32426917.html"
+  }
+ ]
+}

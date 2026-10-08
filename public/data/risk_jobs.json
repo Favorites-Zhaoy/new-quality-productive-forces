@@ -1,0 +1,18 @@
+{
+  "meta": {
+    "id": "risk_jobs",
+    "title": "生成式 AI 职业暴露度",
+    "source": "ILO《Generative AI and Jobs: A Refined Global Index of Occupational Exposure》（2025）",
+    "url": "https://www.ilo.org/publications/generative-ai-and-jobs-refined-global-index-occupational-exposure",
+    "status": "check",
+    "unit": "% 就业",
+    "note": "“暴露”不等于“被替代”，多数岗位更可能被改造而非消失。数值需对照原报告核实。",
+    "usedIn": "4.2 风险：就业冲击"
+  },
+  "title": "就业冲击",
+  "lede": "每 100 个就业岗位中，处于生成式 AI 暴露职业中的数量。",
+  "data": [
+    { "label": "全球", "value": 25 },
+    { "label": "高收入国家", "value": 34 }
+  ]
+}

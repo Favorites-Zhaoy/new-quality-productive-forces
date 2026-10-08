@@ -4,13 +4,11 @@ import { initNav } from './core/nav.js';
 import { heroIntro, initReveals } from './core/reveal.js';
 import { lazyCharts } from './core/lazy.js';
 import { ParticleField } from './three/particles.js';
-import { initEras } from './sections/eras.js';
+import { initChapter1 } from './sections/chapter1.js';
 import { initCard } from './sections/card.js';
 import { initMethod } from './sections/method.js';
 import { buildChapter3, initChapter3 } from './industry/chapter3.js';
 
-import { gdpCurve } from './charts/gdpCurve.js';
-import { employStack } from './charts/employStack.js';
 import { timeline } from './charts/timeline.js';
 import { factorSankey } from './charts/factorSankey.js';
 import { fiveDims } from './charts/fiveDims.js';
@@ -23,7 +21,7 @@ import { jobSunburst } from './charts/jobSunburst.js';
 
 // data-chart 名称 → 绘制函数
 const CHARTS = {
-  gdpCurve, employStack, timeline, factorSankey, fiveDims, industryCompass,
+  timeline, factorSankey, fiveDims, industryCompass,
   impactPanel, impactHeatmap, riskEnergy, riskJobs, dayClock, jobSunburst,
 };
 
@@ -58,7 +56,7 @@ async function boot() {
     console.warn('WebGL 不可用，跳过粒子效果', err);
   }
 
-  initEras(particles); // 钉住区段需先于其后的触发器创建
+  initChapter1(particles); // 第一章的钉住区段需先于其后的触发器创建
   initChapter3(inds, particles);
   initNav(lenis);
   initCard();

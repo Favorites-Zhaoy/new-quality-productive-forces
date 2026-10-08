@@ -79,26 +79,36 @@
           <p><b>生产力</b>是人类改造自然、创造财富的能力。两千年来，它的大部分时间几乎停滞：一个农民一年的产出，与他的祖辈相差无几。</p>
           <p>直到工具开始“自己动起来”。蒸汽机把肌肉换成了机械，电力和流水线把单个工匠换成了工厂体系，计算机和互联网又把纸面的流程变成了比特流。</p>
           <p>每一次跃迁，都不是某一台机器的胜利，而是<b>劳动者、劳动资料、劳动对象</b>三者组合方式的重构。今天，人工智能正在开启第四次重构——它第一次让工具具备了“理解”和“决策”的能力。</p>
-          <p>本章用三组数据回看这段历程：两千年的人均产出曲线、四个时代的工具演化，以及中国七十年的就业结构变迁。</p>
+          <p>本章用三组真实数据回看这段历程：两千年的人均产出长卷、四个时代的工具演化，以及中国七十年的劳动者迁徙。</p>
         </div>
       </div>
 
-      <!-- 1.1 两千年曲线 -->
-      <article class="block" id="block-gdp">
-        <header class="block-head">
-          <span class="block-no">1.1</span>
-          <h3>两千年里的“曲棍球棒”</h3>
-          <p>世界人均 GDP（2011 年国际元）。两千年里的大部分时间，曲线几乎是一条直线。悬停查看数值，切换视图看清每个时代。</p>
-        </header>
-        <div class="chart-toolbar">
-          <div class="seg" role="group" aria-label="视图">
-            <button class="is-on" data-mode="all">两千年</button>
-            <button data-mode="modern">近三百年</button>
-            <button data-mode="log">对数刻度</button>
+      <!-- 1.1 两千年长卷（钉住 + 横向推进） -->
+      <article class="longroll" id="longroll">
+        <div class="longroll__pin">
+          <header class="longroll__head">
+            <span class="block-no">1.1</span>
+            <h3>两千年长卷</h3>
+            <p>继续向下滚动，沿着时间走一遍：世界、中国、英国的人均 GDP（2011 年国际元，公元 1 年—2025 年）。</p>
+          </header>
+          <div class="longroll__meter">
+            <div class="longroll__year"><b id="lr-year">1</b><small>年</small></div>
+            <div class="longroll__value"><span>世界人均 GDP</span><b id="lr-value">791</b><small>国际元</small></div>
           </div>
+          <p class="longroll__caption" id="lr-caption"></p>
+          <div class="longroll__chart"></div>
+          <div class="longroll__src"></div>
         </div>
-        <div class="chart chart--wide" data-chart="gdpCurve" data-src="maddison_gdp.json"></div>
       </article>
+
+      <!-- 过场 1 -->
+      <section class="interlude" id="interlude-1" data-words="改变这一切的|不是|更努力的人|而是|新的工具" data-hi="新的工具">
+        <div class="interlude__pin">
+          <span class="interlude__count">01 / 05</span>
+          <div class="interlude__words"></div>
+          <p class="interlude__tail">从锄头到蒸汽机，从芯片到神经网络——</p>
+        </div>
+      </section>
 
       <!-- 1.2 四个时代（钉住 + 粒子变形） -->
       <article class="eras" id="eras">
@@ -115,30 +125,56 @@
         </div>
       </article>
 
-      <!-- 1.3 就业结构 -->
-      <article class="block" id="block-employ">
-        <header class="block-head">
-          <span class="block-no">1.3</span>
-          <h3>七十年，谁在劳动</h3>
-          <p>中国三次产业就业人员构成（%）。机械化把劳动力从田间解放，数字化把它推向服务业，智能化会把它推向哪里？</p>
-        </header>
-        <div class="chart chart--wide" data-chart="employStack" data-src="china_employment.json"></div>
+      <!-- 1.3 七十年的人口迁徙（钉住 + 点阵迁移） -->
+      <article class="migrate" id="migrate">
+        <div class="migrate__pin">
+          <header class="migrate__head">
+            <span class="block-no">1.3</span>
+            <h3>七十年的人口迁徙</h3>
+            <p>每个点代表中国千分之一的就业人员。继续滚动，看他们如何从田间走进工厂，再走进写字楼。</p>
+          </header>
+          <div class="migrate__year"><b id="mg-year">1952</b></div>
+          <p class="migrate__note" id="mg-note"></p>
+          <div class="migrate__stage"></div>
+          <div class="migrate__src"></div>
+        </div>
       </article>
 
+      <!-- 过场 2 -->
+      <section class="interlude" id="interlude-2" data-words="这一次|工具|第一次|开始|思考" data-hi="思考">
+        <div class="interlude__pin">
+          <span class="interlude__count">01 / 05</span>
+          <div class="interlude__words"></div>
+          <p class="interlude__tail">这正是“新质生产力”被提出的时代背景。</p>
+        </div>
+      </section>
+
       <!-- 1.4 大事记 + 定义 -->
-      <article class="block block--split" id="block-timeline">
-        <div class="timeline-col">
-          <h3 class="timeline-title">新质生产力 · 大事记</h3>
-          <ol class="timeline" data-chart="timeline" data-src="policy_timeline.json"></ol>
-        </div>
-        <div class="define-col">
-          <blockquote class="define" data-reveal>
-            <span class="define__tag">定义</span>
-            <p>新质生产力是创新起主导作用，摆脱传统经济增长方式、生产力发展路径，具有<em>高科技、高效能、高质量</em>特征，符合新发展理念的先进生产力质态。</p>
-            <p>它由<em>技术革命性突破、生产要素创新性配置、产业深度转型升级</em>而催生，以<b>劳动者、劳动资料、劳动对象及其优化组合的跃升</b>为基本内涵，以<b>全要素生产率大幅提升</b>为核心标志。</p>
-            <cite>— 2024 年 1 月 31 日，中共中央政治局第十一次集体学习</cite>
-          </blockquote>
-        </div>
+      <article class="block" id="block-timeline">
+        <header class="block-head">
+          <span class="block-no">1.4</span>
+          <h3>新质生产力 · 大事记</h3>
+          <p>从人工智能国家规划，到“新质生产力”的提出，再到“人工智能+”行动。每个节点都可以点开阅读原文。</p>
+        </header>
+        <div class="tl" data-chart="timeline" data-src="policy_timeline.json"></div>
+
+        <figure class="define-mag" data-reveal>
+          <a class="define-mag__mast" href="https://www.qstheory.cn/yaowen/2024-02/01/c_1130071035.htm" target="_blank" rel="noopener" aria-label="求是网原文">
+            <img src="img/qiushi.png" alt="求是" />
+            <span>2024 年 2 月 1 日</span>
+          </a>
+          <div class="define-mag__body">
+            <span class="define-mag__kicker">什么是新质生产力</span>
+            <blockquote>
+              <p>新质生产力是<em>创新</em>起主导作用，摆脱传统经济增长方式、生产力发展路径，具有<em>高科技、高效能、高质量</em>特征，符合新发展理念的先进生产力质态。</p>
+              <p>它由<em>技术革命性突破、生产要素创新性配置、产业深度转型升级</em>而催生，以<b>劳动者、劳动资料、劳动对象及其优化组合的跃升</b>为基本内涵，以<b>全要素生产率大幅提升</b>为核心标志，特点是创新，关键在质优，本质是先进生产力。</p>
+            </blockquote>
+            <figcaption>
+              <span>习近平在中共中央政治局第十一次集体学习时强调<br/>加快发展新质生产力 扎实推进高质量发展</span>
+              <a href="https://www.qstheory.cn/yaowen/2024-02/01/c_1130071035.htm" target="_blank" rel="noopener">求是网 · 阅读原文 ↗</a>
+            </figcaption>
+          </div>
+        </figure>
       </article>
     </section>
 

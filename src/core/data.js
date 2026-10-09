@@ -17,6 +17,7 @@ export const DATA_FILES = [
   'risk_jobs.json',
   'day_clock.json',
   'job_tasks.json',
+  'industry_ruler.json',
   'deep/C.json',
   'deep/I.json',
   ...'ABCDEFGHIJKLMNOPQRST'.split('').map((c) => `industries/${c}.json`),

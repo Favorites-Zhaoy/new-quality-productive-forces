@@ -5,6 +5,7 @@ import { ScrollTrigger, gsap } from '../core/scroll.js';
 import { splitChars } from '../core/reveal.js';
 import { KIT } from './kit.js';
 import { deepHTML, initDeep } from './deep.js';
+import { renderRuler } from './ruler.js';
 
 // 深度专题：第二产业选制造业，第三产业选信息技术服务业
 const DEEP = ['C', 'I'];
@@ -30,7 +31,9 @@ export async function buildChapter3() {
   // 深度专题排在最前，其余门类按代码顺序
   const featured = DEEP.map((c) => inds.find((d) => d.code === c)).filter((d) => d.deep);
   const rest = inds.filter((d) => !d.deep);
-  renderWall(inds);
+  const ruler = await loadData('industry_ruler.json');
+  renderRuler(document.getElementById('ind-wall'), ruler, inds);
+  attachStatus(document.getElementById('ind-wall'), ruler.meta);
   renderRail([...featured, ...rest]);
   const body = document.getElementById('ind-body');
   body.innerHTML = featured.map(sectionHTML).join('')
@@ -41,12 +44,6 @@ export async function buildChapter3() {
 
 /** DOM 就绪后再挂动画、图表与粒子 */
 export function initChapter3(inds, particles) {
-  // 墙：数字滚动
-  document.querySelectorAll('#ind-wall [data-count]').forEach((n) => countUp(n, '#ind-wall'));
-  gsap.from('#ind-wall .wall-card', {
-    opacity: 0, y: 30, duration: 0.9, ease: 'expo.out', stagger: { each: 0.04, grid: 'auto', from: 'start' },
-    scrollTrigger: { trigger: '#ind-wall', start: 'top 80%' },
-  });
 
   inds.forEach((ind) => {
     const sec = document.getElementById(`ind-${ind.code}`);
@@ -116,26 +113,6 @@ export function initChapter3(inds, particles) {
   document.querySelectorAll('.ind-viz[data-spec]').forEach((el) => io.observe(el));
 
   initRail(inds);
-}
-
-/* ---------------- 二十个数字 ---------------- */
-function renderWall(inds) {
-  const wall = document.getElementById('ind-wall');
-  wall.innerHTML = `
-    <header class="wall-head">
-      <h3 class="ink-title">二十个行业，二十个数字</h3>
-      <p>每个门类挑出一个最能说明 AI 带来变化的数字。点击卡片进入对应行业。</p>
-    </header>
-    <div class="wall-grid">
-      ${inds.map((d) => `
-        <a class="wall-card" href="#ind-${d.code}" style="--sec:var(${SECTOR[d.sector].c})">
-          <span class="wall-code">${d.code}</span>
-          <span class="wall-name">${d.short}</span>
-          ${d.headline ? `
-            <b class="wall-num"><span data-count="${esc(d.headline.value)}">${esc(d.headline.value)}</span><small>${esc(d.headline.unit)}</small></b>
-            <span class="wall-label">${esc(d.headline.label)}</span>` : '<span class="wall-label">数据整理中</span>'}
-        </a>`).join('')}
-    </div>`;
 }
 
 /* ---------------- 侧边导轨 ---------------- */

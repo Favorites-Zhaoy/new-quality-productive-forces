@@ -120,36 +120,40 @@ main { position: relative; z-index: 2; }
   position: relative;
   max-width: var(--maxw);
   margin: 0 auto;
-  padding: 18vh var(--gutter) 10vh;
+  padding: 9vh var(--gutter) 6vh;
 }
 .chapter + .chapter { border-top: 3px double var(--rule-strong); }
 
+/* 章首：左侧大号章节序号，右侧横排标题 + 导语（不再竖排，避免大片留白） */
 .chapter-head {
   display: grid;
-  grid-template-columns: auto 1fr;
-  gap: clamp(24px, 5vw, 72px);
+  grid-template-columns: auto minmax(0, 1fr);
+  grid-template-areas: "no title" "no sub" "no lede";
+  column-gap: clamp(20px, 3.5vw, 52px);
   align-items: start;
-  margin-bottom: 10vh;
+  margin-bottom: 6vh;
+  padding-bottom: 4vh;
+  border-bottom: 1px solid var(--rule);
 }
-.vtitle-col {
-  display: flex; flex-direction: row-reverse; align-items: flex-start; gap: 14px;
-  border-right: 1px solid var(--rule);
-  padding-right: clamp(16px, 3vw, 40px);
-}
+.vtitle-col { display: contents; }
 .chapter-no {
-  font-family: var(--f-mono); font-size: 14px; color: var(--paper-2);
-  background: var(--c-red); padding: 6px 4px; writing-mode: vertical-rl; letter-spacing: .1em;
+  grid-area: no; align-self: stretch;
+  font-family: var(--f-roman); font-weight: 600; line-height: .8;
+  font-size: clamp(110px, 15vw, 220px);
+  color: var(--c-red); letter-spacing: -.02em;
+  padding-right: clamp(16px, 3vw, 40px);
+  border-right: 3px double var(--rule-strong);
 }
 .vtitle {
-  writing-mode: vertical-rl;
-  font-size: clamp(44px, 6vw, 80px);
-  letter-spacing: .06em; line-height: 1.05;
-  max-height: 72vh;
+  grid-area: title;
+  font-size: clamp(38px, 5.2vw, 76px);
+  letter-spacing: .04em; line-height: 1.1;
 }
 .vsub {
-  writing-mode: vertical-rl;
-  margin: 0; font-family: var(--f-sans); font-size: 14px; letter-spacing: .3em; color: var(--ink-2);
+  grid-area: sub;
+  margin: 10px 0 18px; font-family: var(--f-sans); font-size: 14px; letter-spacing: .3em; color: var(--c-red);
 }
+.chapter-head .lede { grid-area: lede; }
 .lede { font-size: 15.5px; color: var(--ink-2); text-align: justify; }
 .lede b { color: var(--ink); }
 .columns-3 { column-count: 3; column-gap: 36px; column-rule: 1px solid var(--rule); }
@@ -160,21 +164,32 @@ main { position: relative; z-index: 2; }
 
 @media (max-width: 1080px) { .columns-3 { column-count: 2; } }
 @media (max-width: 720px) {
-  .chapter-head { grid-template-columns: 1fr; }
-  .vtitle-col { flex-direction: row; border-right: 0; border-bottom: 1px solid var(--rule); padding: 0 0 16px; }
-  .vtitle, .vsub, .chapter-no { writing-mode: horizontal-tb; }
-  .vtitle { font-size: clamp(34px, 9vw, 48px); max-height: none; }
-  .vsub { letter-spacing: .1em; align-self: flex-end; }
+  .chapter-head { grid-template-columns: auto minmax(0, 1fr); grid-template-areas: "no title" "sub sub" "lede lede"; align-items: end; }
+  .chapter-no { font-size: 76px; border-right: 0; padding-right: 0; align-self: end; }
+  .vtitle { font-size: clamp(30px, 8.5vw, 44px); }
   .columns-3 { column-count: 1; }
 }
 
 /* ================= 内容块 ================= */
-.block { margin: 0 0 16vh; }
-.block-head { max-width: 760px; margin-bottom: 28px; }
+.block { margin: 0 0 8vh; }
+.block-head { max-width: 860px; margin-bottom: 24px; }
+/* 小节序号：大号红色数字，与标题并排 */
 .block-no {
-  display: inline-block; font-family: var(--f-mono); font-size: 13px;
-  color: var(--c-red); border: 1px solid var(--c-red); border-radius: 999px; padding: 0 10px; margin-bottom: 12px;
+  display: inline-block;
+  font-family: var(--f-roman); font-weight: 600; line-height: .82;
+  font-size: clamp(46px, 5vw, 76px); color: var(--c-red); letter-spacing: -.01em;
+  margin: 0 0 6px;
 }
+.block-head:has(> .block-no), .longroll__head, .migrate__head {
+  display: grid; grid-template-columns: auto minmax(0, 1fr); column-gap: 18px; align-items: end;
+}
+.block-head:has(> .block-no) > .block-no, .longroll__head > .block-no, .migrate__head > .block-no {
+  grid-row: 1 / span 2; align-self: stretch; margin: 0;
+  padding-right: 18px; border-right: 2px solid var(--c-red);
+  display: flex; align-items: center;
+}
+.block-head:has(> .block-no) > h3, .longroll__head > h3, .migrate__head > h3 { grid-column: 2; margin: 0 0 6px; }
+.block-head:has(> .block-no) > p, .longroll__head > p, .migrate__head > p { grid-column: 2; }
 .block-head h3 { font-size: clamp(26px, 3.2vw, 40px); margin-bottom: 12px; color: var(--ink); }
 .block-head p { color: var(--ink-2); margin: 0; }
 

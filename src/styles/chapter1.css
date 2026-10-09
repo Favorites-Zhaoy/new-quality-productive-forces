@@ -6,7 +6,7 @@
 @keyframes lr-pulse { 0% { transform: scale(.6); opacity: .5; } 100% { transform: scale(2.2); opacity: 0; } }
 
 /* ---------- 共用：钉住版面 ---------- */
-.longroll, .migrate { position: relative; margin: 0 calc(-1 * var(--gutter)) 12vh; }
+.longroll, .migrate { position: relative; margin: 0 calc(-1 * var(--gutter)) 4vh; }
 .longroll__pin, .migrate__pin {
   height: 100vh; height: 100svh;
   display: grid;

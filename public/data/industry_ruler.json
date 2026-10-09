@@ -1,0 +1,222 @@
+{
+ "meta": {
+  "id": "industry_ruler",
+  "title": "二十个行业，同一把尺子：可比的百分数",
+  "source": "各行业调研数据（政府部门、统计公报、行业协会、企业公开披露），每项另附来源",
+  "url": "",
+  "status": "src",
+  "note": "“用上了多少”与“改变了多少”分别为覆盖率与变化幅度；同一面板内单位一致（%），但各行业的具体指标不同，仅作量级对比。部分为地方、试点或企业数据，已在条目中注明。",
+  "usedIn": "第三章 · 同一把尺子"
+ },
+ "reach": [
+  {
+   "code": "L",
+   "value": 62,
+   "label": "广西律师事务所 AI 工具使用率",
+   "source": "人民网-广西频道",
+   "url": "http://gx.people.com.cn/n2/2026/0729/c179464-41653328.html",
+   "kind": "ai",
+   "note": "地方数据"
+  },
+  {
+   "code": "J",
+   "value": 71.4,
+   "label": "银行客服全渠道自助分流率",
+   "source": "中国银行业协会《中国银行业客服中心与远程银行发展报告(2025)》，新华财经报道",
+   "url": "https://www.cnfin.com/hb-lb/detail/20260828/4461877_1.html",
+   "kind": "ai",
+   "note": "行业均值"
+  },
+  {
+   "code": "B",
+   "value": 65,
+   "label": "煤矿智能化产能占比",
+   "source": "中国能源报（人民日报社主管），2026-03-16 第06版《煤矿智能化走向智能定制化》",
+   "url": "https://paper.people.com.cn/zgnyb/pc/content/202603/16/content_30145923.html",
+   "kind": "ai",
+   "note": "“突破 65%”"
+  },
+  {
+   "code": "K",
+   "value": 60,
+   "label": "物业行业 AI 整体渗透率",
+   "source": "新华网（引述中指研究院物业事业部研究副总监彭雨、南都物业副总裁王黎）",
+   "url": "https://www.news.cn/house/20260526/bb7fd155c7f64bff80321ceb0d2aae04/c.html",
+   "kind": "ai",
+   "note": "业内专家估计"
+  },
+  {
+   "code": "H",
+   "value": 56.0,
+   "label": "网上外卖使用率（占网民）",
+   "source": "中国互联网络信息中心（CNNIC）第57次《中国互联网络发展状况统计报告》（2026-03）",
+   "url": "https://www.cnnic.cn/NMediaFile/2026/0304/MAIN1772588317069TUXN3827X8.pdf",
+   "kind": "digital"
+  },
+  {
+   "code": "S",
+   "value": 50,
+   "label": "智能派单与预审替代的人工服务",
+   "source": "中央网信办《专家解读｜推动“人工智能+政务”深度融合 赋能政务领域数智转型升级》（2025-10-10）；CNNIC第57次报告引用",
+   "url": "https://www.cac.gov.cn/2025-10/10/c_1761819470255103.htm",
+   "kind": "ai",
+   "note": "原文“近一半”"
+  },
+  {
+   "code": "C",
+   "value": 47.5,
+   "label": "工业企业应用大模型 / 智能体比例",
+   "source": "IDC调研（经济参考报，新华网转载，2026-01-08）",
+   "url": "https://www.news.cn/tech/20260108/a3e45794180b4a408546f3beda749411/c.html",
+   "kind": "ai",
+   "note": "IDC 调研"
+  },
+  {
+   "code": "I",
+   "value": 42.8,
+   "label": "生成式 AI 普及率（占全国人口）",
+   "source": "中国互联网络信息中心（CNNIC）《生成式人工智能应用发展报告》2024/2025/2026 及第57次《中国互联网络发展状况统计报告》",
+   "url": "https://www.news.cn/tech/20260302/66c4ab06b6f34f8d806b416b3acc9f0b/c.html",
+   "kind": "ai"
+  },
+  {
+   "code": "A",
+   "value": 27.6,
+   "label": "农业生产信息化率",
+   "source": "科技日报（新华网转载）；农业农村部",
+   "url": "https://www.news.cn/tech/20251021/adcfc6481b684a5c8252b56f92302fac/c.html",
+   "kind": "digital"
+  },
+  {
+   "code": "F",
+   "value": 26.1,
+   "label": "实物商品网上零售额占社零比重",
+   "source": "国家统计局历年《国民经济和社会发展统计公报》",
+   "url": "https://www.stats.gov.cn/sj/zxfb/202602/t20260228_1962662.html",
+   "kind": "digital"
+  },
+  {
+   "code": "D",
+   "value": 80,
+   "label": "南方电网智能客服、输电巡检人工替代率",
+   "source": "经济观察报；科技日报；南方电网'南网50Hz'",
+   "url": "https://www.csee.org.cn/portal/xpqyzx/20240723/33765.html",
+   "kind": "ai",
+   "note": "企业公布"
+  }
+ ],
+ "change": [
+  {
+   "code": "I",
+   "value": -98,
+   "label": "旗舰大模型输入价格（通义千问-Max，¥120→¥2.4）",
+   "source": "阿里云百炼官方定价页（互联网档案馆存档 2024-04 / 2025-04）",
+   "url": "https://web.archive.org/web/20250405164059/https://help.aliyun.com/zh/model-studio/models",
+   "note": "本站据官方定价页存档计算"
+  },
+  {
+   "code": "S",
+   "value": -90,
+   "label": "公文审核时间（深圳福田 AI 数智员工）",
+   "source": "CNNIC 第 57 次《中国互联网络发展状况统计报告》",
+   "url": "https://www.cnnic.cn/NMediaFile/2026/0304/MAIN1772588317069TUXN3827X8.pdf"
+  },
+  {
+   "code": "H",
+   "value": -67,
+   "label": "无人机外卖配送时间（30→约 10 分钟）",
+   "source": "美团官方新闻（2026-09-11《美团无人机低空航网落地上海西岸》）",
+   "url": "https://www.meituan.com/news/NN260911177010407",
+   "note": "据美团“常规约 30 分钟、最快约 10 分钟”折算"
+  },
+  {
+   "code": "D",
+   "value": -60,
+   "label": "风电设备检修时长（国家能源集团“擎源”大模型）",
+   "source": "科技日报（国家能源集团“擎源”发电行业大模型）",
+   "url": "https://www.stdaily.com/web/gdxw/2026-07/29/content_555643.html",
+   "note": "企业公布"
+  },
+  {
+   "code": "A",
+   "value": -50,
+   "label": "AI 变量施肥：人工成本（北大荒试点）",
+   "source": "科技日报；农民日报社/大疆农业白皮书",
+   "url": "https://www.stdaily.com/web/gdxw/2026-08/10/content_561999.html",
+   "note": "试点数据"
+  },
+  {
+   "code": "R",
+   "value": -50,
+   "label": "漫剧单分钟制作成本",
+   "source": "新华网《新华网科技观察丨当AI遇到漫剧》（2026-01-09）",
+   "url": "https://www.news.cn/tech/20260109/b6cc8c12b74247709da1f6a0035cea8c/c.html"
+  },
+  {
+   "code": "B",
+   "value": -40,
+   "label": "灾害严重矿井事故率",
+   "source": "中国能源报《煤矿智能化走向智能定制化》（2026-03-16）",
+   "url": "https://paper.people.com.cn/zgnyb/pc/content/202603/16/content_30145923.html"
+  },
+  {
+   "code": "M",
+   "value": -26,
+   "label": "台风路径 3 天预报误差（盘古 vs 欧洲中心）",
+   "source": "Bi et al., Nature 619, 533–538 (2023)（盘古气象）；复旦大学新闻网（FuXi-Weather，Nature Communications 2025）",
+   "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10356604",
+   "note": "由 120.29 km 与 162.28 km 计算"
+  },
+  {
+   "code": "G",
+   "value": -20,
+   "label": "北部湾港铁水联运中转停留时间",
+   "source": "交通运输部专题新闻发布会（2026-08-20）；京东集团官方博客（2026-08-19）；国家邮政局（2026-09-30）",
+   "url": "https://www.mot.gov.cn/xinwen/xinwenfabuhui/202608/t20260818_4222547.html"
+  },
+  {
+   "code": "C",
+   "value": 22.3,
+   "label": "卓越级智能工厂生产效率",
+   "source": "工业和信息化部数据（中国证券报·中证网，2025-06-24）",
+   "url": "https://cs.com.cn/xwzx/hg/202506/t20250624_6497676.html"
+  },
+  {
+   "code": "E",
+   "value": 30,
+   "label": "“空中造楼机”施工工效",
+   "source": "科技日报；中华网商业快讯（企业稿）",
+   "url": "https://www.stdaily.com/web/gdxw/2026-03/06/content_481721.html"
+  },
+  {
+   "code": "K",
+   "value": 44,
+   "label": "贝壳资管经理人效",
+   "source": "凤凰网财经据贝壳2025年第三季度财报",
+   "url": "https://finance.ifeng.com/c/8oLtUswa1Pt"
+  },
+  {
+   "code": "L",
+   "value": 60,
+   "label": "深圳法官人均月结案数（AI 辅助审判系统上线后）",
+   "source": "人民网-深圳频道",
+   "url": "http://sz.people.com.cn/n2/2026/0923/c202846-41706087.html",
+   "note": "法院属门类 S，作为法律服务示例"
+  },
+  {
+   "code": "N",
+   "value": 233,
+   "label": "大江大河洪水预见期（3→10 天）",
+   "source": "新华社（人民网转载），水利部'十四五'时期数字孪生水利体系建设进展成效新闻发布会，2025-12-16",
+   "url": "http://env.people.com.cn/n1/2025/1217/c1010-40626221.html",
+   "note": "由 3 天、10 天计算",
+   "cap": 120
+  }
+ ],
+ "missing": [
+  "O",
+  "P",
+  "Q",
+  "T"
+ ]
+}

@@ -3,63 +3,31 @@
    每个行业用 --sec（产业色）做点缀
    ========================================================= */
 
-/* ---------- 二十个行业，同一把尺子（数字网格） ---------- */
+/* ---------- 同一把尺子 ---------- */
 .ind-wall { margin: 6vh 0 6vh; }
-.wall-head { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 12px 40px; margin-bottom: 14px; }
-.wall-head h3 { font-size: clamp(30px, 4vw, 52px); }
-.wall-head p { margin: 0; color: var(--ink-2); max-width: 38em; font-size: 14.5px; }
-.wall-head b { color: var(--c-red); }
-.wall-legend { display: flex; flex-wrap: wrap; gap: 6px 18px; margin-bottom: 12px; font-family: var(--f-sans); font-size: 12px; color: var(--ink-2); }
-.wall-legend span { display: inline-flex; align-items: center; gap: 6px; }
-.wall-legend i { width: 14px; height: 6px; border-radius: 2px; }
-.lg-ai { background: var(--c-red); } .lg-digital { background: var(--c-blue); }
-.lg-down { background: var(--c-teal); } .lg-up { background: var(--c-red); opacity: .75; }
-.wall-legend .lg-note { color: var(--ink-3); }
-
-.wall-grid {
-  display: grid; grid-template-columns: repeat(5, minmax(0, 1fr));
-  border-top: 3px double var(--rule-strong); border-left: 1px solid var(--rule);
+.ruler-head { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 10px 40px; margin-bottom: 22px; }
+.ruler-head h3 { font-size: clamp(30px, 4vw, 52px); }
+.ruler-head p { margin: 0; color: var(--ink-2); max-width: 34em; }
+.ruler-head b { color: var(--c-red); }
+.ruler { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(20px, 3vw, 44px); border-top: 3px double var(--rule-strong); padding-top: 18px; }
+.ruler-panel h4 { display: flex; align-items: baseline; gap: 10px; font-size: 22px; margin-bottom: 8px; }
+.ruler-panel h4 i {
+  font-style: normal; display: grid; place-items: center; width: 34px; height: 34px; border-radius: 4px;
+  background: var(--c-red); color: var(--paper-2); font-size: 18px; transform: rotate(-4deg);
 }
-.wall-card {
-  position: relative; display: flex; flex-direction: column; gap: 2px;
-  padding: 16px 16px 14px; min-height: 196px;
-  border-right: 1px solid var(--rule); border-bottom: 1px solid var(--rule);
-  text-decoration: none; color: var(--ink);
-  transition: background .35s;
-}
-.wall-card::before {
-  content: ""; position: absolute; left: 0; right: 0; top: 0; height: 4px; background: var(--sec);
-  transform: scaleX(.18); transform-origin: 0 50%; transition: transform .5s var(--ease-out);
-}
-.wall-card:hover { background: var(--paper-2); }
-.wall-card:hover::before { transform: scaleX(1); }
-.wall-code { font-family: var(--f-mono); font-size: 12px; color: var(--ink-3); }
-.wall-name { font-weight: 700; font-size: 15px; margin-bottom: 6px; }
-.wall-empty { margin-top: auto; font-family: var(--f-sans); font-size: 12.5px; color: var(--ink-3); }
-
-.wm { margin-top: auto; display: grid; gap: 10px; }
-.wm-row {
-  display: grid; grid-template-columns: auto 1fr; grid-template-areas: "tag num" "bar bar" "lab lab";
-  align-items: baseline; column-gap: 8px; row-gap: 3px;
-}
-.wm-tag {
-  grid-area: tag; font-family: var(--f-sans); font-size: 11px; letter-spacing: .1em;
-  padding: 1px 6px; border-radius: 3px; background: var(--paper-3); color: var(--ink-2);
-}
-.wm-num { grid-area: num; font-family: var(--f-serif); font-weight: 900; font-size: clamp(22px, 2.2vw, 30px); line-height: 1.05; color: var(--c-red); text-align: right; font-variant-numeric: tabular-nums; }
-.wm-num small { font-size: .5em; margin-left: 1px; }
-.wm-num.is-digital { color: var(--c-blue-deep); }
-.wm-num.is-down { color: #3D7366; }
-.wm-bar { grid-area: bar; position: relative; display: block; height: 6px; background: var(--paper-3); border-radius: 3px; overflow: visible; }
-.wm-bar em { position: absolute; top: 0; bottom: 0; left: 0; border-radius: 3px; background: var(--c-red); }
-.wm-bar em.is-digital { background: var(--c-blue); }
-.wm-bar em.is-down { background: var(--c-teal); }
-.wm-bar em.is-up { background: var(--c-red); opacity: .75; }
-.wm-bar--div::after { content: ""; position: absolute; left: 50%; top: -3px; bottom: -3px; width: 1px; background: var(--ink-2); }
-.wm-bar s { position: absolute; right: -2px; top: -9px; text-decoration: none; font-weight: 900; font-size: 13px; color: var(--c-red); }
-.wm-label { grid-area: lab; font-family: var(--f-sans); font-size: 11.5px; line-height: 1.45; color: var(--ink-3); }
-@media (max-width: 1080px) { .wall-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
-@media (max-width: 760px)  { .wall-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } .wall-card { min-height: 170px; padding: 12px; } }
+.ruler-panel h4 small { font-family: var(--f-sans); font-weight: 400; font-size: 13px; color: var(--ink-3); }
+.ruler-legend { display: flex; flex-wrap: wrap; gap: 14px; margin-bottom: 10px; font-family: var(--f-sans); font-size: 12px; color: var(--ink-2); }
+.ruler-legend span { display: inline-flex; align-items: center; gap: 6px; }
+.ruler-legend i { width: 12px; height: 8px; border-radius: 2px; }
+.ruler-viz svg { width: 100%; height: auto; overflow: visible; font-family: var(--f-sans); }
+.r-code { font-family: var(--f-mono); font-size: 12px; font-weight: 500; fill: var(--ink-3); }
+.r-name { font-family: var(--f-serif); font-size: 14px; font-weight: 700; fill: var(--ink); }
+.r-val { font-family: var(--f-serif); font-size: 15px; font-weight: 900; }
+.r-desc { font-size: 11.5px; fill: var(--ink-3); }
+.r-axis { font-family: var(--f-mono); font-size: 10.5px; fill: var(--ink-3); }
+.ruler-missing { margin: 14px 0 0; font-family: var(--f-sans); font-size: 12.5px; color: var(--ink-3); }
+#ind-wall > .chart-source { margin-top: 8px; }
+@media (max-width: 960px) { .ruler { grid-template-columns: 1fr; } }
 
 /* ---------- 侧边导轨 ---------- */
 .ind-rail {

@@ -184,57 +184,6 @@ main { position: relative; z-index: 2; }
 }
 @media (max-width: 900px) { .block--split { grid-template-columns: 1fr; } }
 
-/* ================= 1.2 四个时代 ================= */
-.eras { position: relative; margin: 0 calc(-1 * var(--gutter)) 16vh; }
-.eras__pin {
-  height: 100vh; height: 100svh;
-  display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 6fr);
-  align-items: center; gap: 40px;
-  padding: var(--topbar-h) var(--gutter) 0;
-}
-.eras__text h3 { font-size: clamp(26px, 3.2vw, 40px); margin-bottom: 28px; }
-.eras__list { list-style: none; margin: 0; padding: 0; counter-reset: era; }
-.eras__list li {
-  position: relative;
-  padding: 16px 0 16px 64px;
-  border-top: 1px solid var(--rule);
-  color: var(--ink-3);
-  transition: color .5s;
-}
-.eras__list li:last-child { border-bottom: 1px solid var(--rule); }
-.eras__list li::before {
-  counter-increment: era; content: "0" counter(era);
-  position: absolute; left: 0; top: 18px;
-  font-family: var(--f-mono); font-size: 13px;
-  padding: 2px 8px; border-radius: 4px; background: var(--paper-3); color: var(--ink-3);
-  transition: background .5s, color .5s;
-}
-.eras__list h4 { font-size: 22px; display: flex; gap: 12px; align-items: baseline; }
-.eras__list h4 small { font-family: var(--f-mono); font-weight: 400; font-size: 12px; }
-.eras__list .era-body { max-height: 0; overflow: hidden; transition: max-height .7s var(--ease-out), opacity .5s; opacity: 0; }
-.eras__list .era-body p { margin: 10px 0 0; font-size: 14.5px; }
-.eras__list .era-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 10px; }
-.eras__list .era-tags span { font-family: var(--f-sans); font-size: 12px; padding: 2px 10px; border-radius: 999px; background: var(--c-blue-wash); color: var(--c-blue-deep); }
-.eras__list li.is-active { color: var(--ink); }
-.eras__list li.is-active::before { background: var(--c-red); color: var(--paper-2); }
-.eras__list li.is-active .era-body { max-height: 220px; opacity: 1; }
-
-.eras__stage { position: relative; height: 72vh; }
-.eras__ring {
-  position: absolute; inset: 6% 8%;
-  border-radius: 50%;
-  border: 1px dashed var(--rule-strong);
-}
-.eras__label {
-  position: absolute; right: 8%; bottom: 2%;
-  font-family: var(--f-brush); font-size: clamp(56px, 7vw, 96px); line-height: 1; color: var(--c-red); opacity: .85;
-}
-@media (max-width: 900px) {
-  .eras__pin { grid-template-columns: 1fr; grid-template-rows: auto 1fr; padding-top: calc(var(--topbar-h) + 16px); }
-  .eras__stage { height: 38vh; order: -1; }
-  .eras__list .era-body p { font-size: 13.5px; }
-}
-
 /* ================= 1.4 大事记 ================= */
 .timeline-col { align-self: start; }
 .timeline-title {

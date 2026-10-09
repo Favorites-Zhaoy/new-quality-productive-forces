@@ -2,10 +2,10 @@
 
 运行：python data/scripts/build_ch1.py
 
-1. 世界 / 中国 / 英国人均 GDP（2011 年国际元）
+1. 世界 / 中国 / 英国人均 GDP（2011 年国际元，1600—2025 年）
    - 1820—2022：Maddison Project Database 2023，Regional data 表的 World GDP pc；GDPpc 表的 CHN、GBR。
    - 2023—2025：MPD 2023 只到 2022 年，按世界银行 WDI 人均 GDP（PPP）的逐年增长率外推。
-   - 公元 1—1700 年的世界值：MPD 2023 未提供世界汇总，取 Maddison (2010) 原始数据库的
+   - 1600、1700 年的世界值：MPD 2023 未提供 1820 年以前的世界汇总，取 Maddison (2010) 原始数据库的
      World Average（1990 年 GK 国际元），按两版 1820 年世界值之比换算到 2011 年国际元（比值链接）。
 2. 中国三次产业就业人员（1952—2024）
    - 《中国统计年鉴 2025》表 4-2“按三次产业分就业人员数（年底数）”，由官方表格图片转录，
@@ -65,20 +65,21 @@ def extend(points, iso):
     return points
 
 
-world = extend(world, "WLD")
-china = extend(country("CHN"), "CHN")
-uk = extend(country("GBR"), "GBR")
+START = 1600  # 页面从 1600 年开始
+world = [p for p in extend(world, "WLD") if p["x"] >= START]
+china = [p for p in extend(country("CHN"), "CHN") if p["x"] >= START]
+uk = [p for p in extend(country("GBR"), "GBR") if p["x"] >= START]
 
 gdp = {
     "meta": {
         "id": "maddison_gdp",
-        "title": "世界、中国、英国人均 GDP（公元 1 年—2025 年）",
+        "title": "世界、中国、英国人均 GDP（1600—2025 年）",
         "source": "Maddison Project Database 2023（Bolt & van Zanden, 2024）；1820 年以前世界值：Maddison (2010)；2023—2025 年按世界银行 WDI 增长率延伸",
         "url": "https://www.rug.nl/ggdc/historicaldevelopment/maddison/releases/maddison-project-database-2023",
         "status": "ok",
         "unit": "2011 年国际元",
-        "note": f"原始文件见 data/raw/。1820 年以前的世界值为 Maddison (2010) 1990 年 GK 国际元，按 1820 年两版之比（{link:.3f}）换算，仅有公元 1、1000、1500、1600、1700 年等基准年份；MPD 2023 数据截至 2022 年，2023—2025 年以世界银行 WDI 人均 GDP（PPP，2021 年不变国际元，NY.GDP.PCAP.PP.KD，2026-07-13 更新）的逐年增长率外推。两段均以虚线表示。",
-        "usedIn": "1.1 两千年长卷",
+        "note": f"原始文件见 data/raw/。1820 年以前的世界值为 Maddison (2010) 1990 年 GK 国际元，按 1820 年两版之比（{link:.3f}）换算，1820 年以前仅有 1600、1700 两个基准年份；MPD 2023 数据截至 2022 年，2023—2025 年以世界银行 WDI 人均 GDP（PPP，2021 年不变国际元，NY.GDP.PCAP.PP.KD，2026-07-13 更新）的逐年增长率外推。两段均以虚线表示。",
+        "usedIn": "1.1 四个时代，一条曲线",
         "citation": "Bolt, J. and J. L. van Zanden (2024), “Maddison style estimates of the evolution of the world economy: A new 2023 update”, Journal of Economic Surveys.",
     },
     "link_ratio_1820": round(link, 4),
@@ -105,7 +106,7 @@ emp = {
         "status": "ok",
         "unit": "万人；构成为 %",
         "note": "由官方表格图片转录（原图与转录 CSV 见 data/raw/），已逐年校验三次产业之和等于合计。1990 年就业人员数较 1989 年跳升，系统计口径调整所致。",
-        "usedIn": "1.3 七十年的人口迁徙",
+        "usedIn": "1.2 七十年的人口迁徙",
     },
     "data": [
         {

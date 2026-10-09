@@ -62,12 +62,12 @@ export function initChapter3(inds, particles) {
         particles.setSpin(0);
         particles.morphTo(`glyph:${ind.glyph}`, 1.6);
         particles.anchor(slot, 0.95);
-        particles.show(true, 0.8, 0.85);
+        particles.show(true, 0.8, 0.85, `ind-${ind.code}`);
       };
       ScrollTrigger.create({
         trigger: head, start: 'top 60%', end: 'bottom 25%',
         onEnter: on, onEnterBack: on,
-        onLeave: () => particles.show(false, 0.5), onLeaveBack: () => particles.show(false, 0.5),
+        onLeave: () => particles.show(false, 0.5, 1, `ind-${ind.code}`), onLeaveBack: () => particles.show(false, 0.5, 1, `ind-${ind.code}`),
       });
     }
 

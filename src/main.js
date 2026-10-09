@@ -68,23 +68,23 @@ async function boot() {
       particles.morphTo('sphere');
       particles.anchor(null, 1.15);
       particles.setSpin(0.06);
-      particles.show(true, 1, 0.55);
+      particles.show(true, 1, 0.55, 'hero');
     };
     ScrollTrigger.create({
       trigger: '#hero', start: 'top top', end: 'bottom 35%',
       onEnterBack: hero,
-      onLeave: () => particles.show(false, 0.6),
+      onLeave: () => particles.show(false, 0.6, 1, 'hero'),
     });
     const finale = () => {
       particles.setSpin(0);
       particles.morphTo('together', 2.4);
       particles.anchor(null, 0.95);
-      particles.show(true, 1.2, 0.3);
+      particles.show(true, 1.2, 0.3, 'finale');
     };
     ScrollTrigger.create({
       trigger: '#finale', start: 'top 50%', end: 'bottom 40%',
       onEnter: finale, onEnterBack: finale,
-      onLeave: () => particles.show(false), onLeaveBack: () => particles.show(false),
+      onLeave: () => particles.show(false, 1, 1, 'finale'), onLeaveBack: () => particles.show(false, 1, 1, 'finale'),
     });
   }
 
@@ -96,7 +96,7 @@ async function boot() {
   });
   gsap.delayedCall(0.6, () => {
     heroIntro();
-    particles?.show(true, 2.4, 0.55);
+    if (window.scrollY < window.innerHeight) particles?.show(true, 2.4, 0.55, 'hero');
     initReveals();
     lenis.start();
   });

@@ -223,7 +223,9 @@ export class ParticleField {
   }
 
   /** 显隐：淡入淡出画布，隐藏时停止渲染 */
-  show(on, duration = 1, level = 1) {
+  show(on, duration = 1, level = 1, owner = null) {
+    if (on) this.owner = owner;
+    else if (owner && this.owner && this.owner !== owner) return;
     const target = on ? level : 0;
     if (this.level === target) return;
     this.level = target;

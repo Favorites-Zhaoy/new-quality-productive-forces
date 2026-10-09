@@ -4,6 +4,10 @@ import { attachStatus } from '../core/lazy.js';
 import { ScrollTrigger, gsap } from '../core/scroll.js';
 import { splitChars } from '../core/reveal.js';
 import { KIT } from './kit.js';
+import { deepHTML, initDeep } from './deep.js';
+
+// 深度专题：第二产业选制造业，第三产业选信息技术服务业
+const DEEP = ['C', 'I'];
 
 const SECTOR = {
   1: { name: '第一产业', c: '--c-green' },
@@ -20,11 +24,18 @@ export async function buildChapter3() {
   const { data: list } = await loadData('industries.json');
   const results = await Promise.allSettled(list.map((d) => loadData(`industries/${d.code}.json`)));
   const inds = list.map((d, i) => ({ ...d, ...(results[i].status === 'fulfilled' ? results[i].value : {}), ready: results[i].status === 'fulfilled' }));
+  const deeps = await Promise.allSettled(DEEP.map((c) => loadData(`deep/${c}.json`)));
+  DEEP.forEach((c, k) => { if (deeps[k].status === 'fulfilled') inds.find((d) => d.code === c).deep = deeps[k].value; });
 
+  // 深度专题排在最前，其余门类按代码顺序
+  const featured = DEEP.map((c) => inds.find((d) => d.code === c)).filter((d) => d.deep);
+  const rest = inds.filter((d) => !d.deep);
   renderWall(inds);
-  renderRail(inds);
+  renderRail([...featured, ...rest]);
   const body = document.getElementById('ind-body');
-  body.innerHTML = inds.map(sectionHTML).join('');
+  body.innerHTML = featured.map(sectionHTML).join('')
+    + `<header class="ind-rest-head"><span>其余 ${rest.length} 个门类</span><p>同样采用“最明显的变化 · 最新真实案例 · 未来发展方向”三层结构。</p></header>`
+    + rest.map(sectionHTML).join('');
   return inds;
 }
 
@@ -41,6 +52,7 @@ export function initChapter3(inds, particles) {
     const sec = document.getElementById(`ind-${ind.code}`);
     if (!sec) return;
     if (ind.meta) attachStatus(sec.querySelector('.ind-src-anchor'), ind.meta);
+    if (ind.deep) initDeep(sec.querySelector('.deep'), ind.deep);
 
     // 头部入场
     const head = sec.querySelector('.ind-head');
@@ -178,8 +190,8 @@ function sectionHTML(d) {
       <div><p>${esc(f.text)}</p><cite>${link(f.source, f.url)}</cite></div></li>`).join('');
 
   return `
-  <section class="ind" id="ind-${d.code}" style="--sec:var(${sec.c})">
-    <div class="ind-folio"><span>第三章 · 行业重塑</span><span>${d.code} 版</span><span>${d.short}</span></div>
+  <section class="ind${d.deep ? ' ind--deep' : ''}" id="ind-${d.code}" style="--sec:var(${sec.c})">
+    <div class="ind-folio"><span>第三章 · 行业重塑${d.deep ? ' · <b>深度专题</b>' : ''}</span><span>${d.code} 版</span><span>${d.short}</span></div>
     <header class="ind-head">
       <div class="ind-letter" aria-hidden="true">${d.code}</div>
       <div class="ind-title">
@@ -196,9 +208,9 @@ function sectionHTML(d) {
     </header>
 
     <div class="ind-layer">
-      <h4 class="ind-layer-title"><i>${NUM[0]}</i>最明显的变化</h4>
+      <h4 class="ind-layer-title"><i>${NUM[0]}</i>${d.deep ? `深度专题 · ${d.deep.title}` : '最明显的变化'}</h4>
       ${d.change?.text ? `<p class="ind-layer-text">${d.change.text}</p>` : ''}
-      <div class="ind-charts">${charts}</div>
+      ${d.deep ? deepHTML(d.deep) : `<div class="ind-charts">${charts}</div>`}
     </div>
 
     ${cases ? `<div class="ind-layer">

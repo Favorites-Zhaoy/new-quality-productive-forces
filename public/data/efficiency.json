@@ -1,0 +1,62 @@
+{
+  "meta": {
+    "id": "efficiency",
+    "title": "生成式 AI 对工作效率的影响：三项随机对照实验",
+    "source": "Peng et al. (2023) arXiv:2302.06590；Noy & Zhang (2023) Science 381:187-192；Brynjolfsson, Li & Raymond (2023) NBER w31161",
+    "url": "https://arxiv.org/abs/2302.06590",
+    "status": "ok",
+    "note": "数字均取自论文原文：编程实验的用时为“完成任务者”的平均用时；写作实验取 Science 发表版（时间 −40%、质量 +18%，工作论文版以标准差表述）；客服实验的“资深/高技能员工”原文为“minimal impact”，无具体数值。",
+    "usedIn": "2.2 效率：同一项任务，AI 省下多少时间"
+  },
+  "race": {
+    "task": "用 JavaScript 实现一个 HTTP 服务器",
+    "control": 160.89,
+    "treated": 71.17,
+    "faster": 55.8,
+    "expected": 35,
+    "n": 95, "nTreated": 45, "nControl": 50,
+    "source": "Peng, Kalliamvakou, Cihon & Demirer (2023), The Impact of AI on Developer Productivity: Evidence from GitHub Copilot",
+    "url": "https://arxiv.org/abs/2302.06590",
+    "quote": "Conditioning on completing the task, the average completion time from the treated group is 71.17 minutes and 160.89 minutes for the control group."
+  },
+  "studies": [
+    {
+      "key": "code", "field": "编程", "title": "程序员 × GitHub Copilot",
+      "who": "95 名专业程序员，随机分为两组",
+      "metrics": [ { "name": "完成用时", "control": 100, "treated": 44.2, "better": "lower", "label": "−55.8%" } ],
+      "source": "Peng et al. 2023 · arXiv", "url": "https://arxiv.org/abs/2302.06590",
+      "quote": "The treatment group, with access to the AI pair programmer, completed the task 55.8% faster than the control group."
+    },
+    {
+      "key": "write", "field": "写作", "title": "专业人士 × ChatGPT",
+      "who": "453 名受过大学教育的专业人士，完成本职相关的写作任务",
+      "metrics": [
+        { "name": "完成用时", "control": 100, "treated": 60, "better": "lower", "label": "−40%" },
+        { "name": "产出质量", "control": 100, "treated": 118, "better": "higher", "label": "+18%" }
+      ],
+      "source": "Noy & Zhang 2023 · Science", "url": "https://economics.mit.edu/sites/default/files/inline-files/Noy_Zhang_1_0.pdf",
+      "quote": "The average time taken decreased by 40% and output quality rose by 18%."
+    },
+    {
+      "key": "support", "field": "客服", "title": "客服坐席 × 生成式 AI 助手",
+      "who": "5,179 名客服坐席的真实工作数据",
+      "metrics": [ { "name": "每小时解决问题数", "control": 100, "treated": 114, "better": "higher", "label": "+14%" } ],
+      "source": "Brynjolfsson, Li & Raymond 2023 · NBER", "url": "https://www.nber.org/papers/w31161",
+      "quote": "Access to the tool increases productivity, as measured by issues resolved per hour, by 14% on average"
+    }
+  ],
+  "gap": {
+    "title": "谁受益最多：客服坐席的生产率提升",
+    "data": [
+      { "label": "新手与低技能坐席", "value": 34 },
+      { "label": "全体平均", "value": 14 },
+      { "label": "资深与高技能坐席", "value": null, "text": "影响甚微" }
+    ],
+    "quote": "including a 34% improvement for novice and low-skilled workers but with minimal impact on experienced and highly skilled workers",
+    "source": "Brynjolfsson, Li & Raymond 2023 · NBER w31161", "url": "https://www.nber.org/papers/w31161",
+    "echoes": [
+      { "text": "编程经验较少的开发者受益更多。", "source": "Peng et al. 2023", "url": "https://arxiv.org/abs/2302.06590" },
+      { "text": "ChatGPT 对起点较低者帮助更大，压缩了生产率分布，劳动者之间的不平等缩小。", "source": "Noy & Zhang 2023", "url": "https://economics.mit.edu/sites/default/files/inline-files/Noy_Zhang_1_0.pdf" }
+    ]
+  }
+}

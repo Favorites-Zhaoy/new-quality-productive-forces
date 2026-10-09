@@ -158,12 +158,12 @@
         <div class="vtitle-col">
           <span class="chapter-no">02</span>
           <h2 class="vtitle ink-title">为什么是人工智能</h2>
-          <p class="vsub">五个维度的驱动机制</p>
+          <p class="vsub">要素重组与效率跃升</p>
         </div>
         <div class="lede columns-3" data-reveal>
           <p>不是所有新技术都能称为“新质生产力”。它必须同时改变<b>三要素</b>：让劳动者更强、让劳动资料更聪明、让劳动对象更广阔。</p>
           <p>人工智能恰好三者兼备。它把<b>数据</b>变成可以加工的原料，把<b>算力和模型</b>变成新的生产工具，又把人从重复劳动中解放出来，去做更有创造性的工作。</p>
-          <p>下面先用一张要素流向图看清这种“重组”，再从<b>效率、知识、创新、协同、执行</b>五个维度，逐一拆解 AI 改变生产方式的机制。</p>
+          <p>下面先用一张要素流向图看清这种“重组”，再用三项随机对照实验，看 AI 让同一份工作<b>快了多少、好了多少、又让谁受益最多</b>。</p>
         </div>
       </div>
 
@@ -176,19 +176,40 @@
         <div class="chart chart--wide chart--tall" data-chart="factorSankey" data-src="factors_sankey.json"></div>
       </article>
 
-      <article class="block" id="block-dims">
-        <header class="block-head">
-          <span class="block-no">2.2</span>
-          <h3>五个维度</h3>
-          <p>点击印章切换维度，每个维度都配有一个可操作的演示。</p>
-        </header>
-        <div class="dims">
-          <div class="dims__tabs" role="tablist" id="dims-tabs"></div>
-          <div class="dims__panel">
-            <div class="dims__copy" id="dims-copy"></div>
-            <div class="dims__viz chart" id="dims-viz" data-chart="fiveDims" data-src="five_dims.json"></div>
+      <!-- 2.2 效率：时间坍缩（钉住） -->
+      <article class="effi" id="effi">
+        <div class="effi__pin">
+          <div class="effi__copy">
+            <span class="block-no">2.2</span>
+            <h3>同一项任务，AI 省下多少时间</h3>
+            <p class="effi__intro">研究者招募 95 名专业程序员，随机分成两组，用 JavaScript 写同一个 HTTP 服务器，只有一组可以使用 AI 编程助手 GitHub Copilot。</p>
+            <div class="effi__clock">
+              <span id="ef-clock-label">不用 AI</span>
+              <b id="ef-clock">0.00</b><small>分钟</small>
+            </div>
+            <ol class="effi__steps">
+              <li class="effi__step is-on">右边的每个方块代表 <b>1 分钟</b>。不用 AI 的程序员，平均需要 <b>160.89</b> 分钟才能完成任务。</li>
+              <li class="effi__step">交给 AI 编程助手之后，同样的任务只用了 <b>71.17</b> 分钟，<b>快 55.8%</b>。</li>
+              <li class="effi__step">每完成一次，就省下近一个半小时。有意思的是：程序员们自己只预估了 <b>35%</b> 的提升，实际效果比他们想的还要大。</li>
+            </ol>
           </div>
+          <div class="effi__stage"></div>
         </div>
+      </article>
+
+      <article class="block" id="block-effi-more">
+        <header class="block-head">
+          <h3>不只是编程</h3>
+          <p>三项随机对照实验、三类知识型工作：对照组记为 100，红条是使用 AI 之后的水平。</p>
+        </header>
+        <div class="effi-studies" id="effi-studies"></div>
+
+        <header class="block-head effi-gap__head">
+          <h3>谁受益最多？</h3>
+          <p>AI 带来的提升并不平均：起点越低的人，受益越大。</p>
+        </header>
+        <div class="effi-gap" id="effi-gap"></div>
+        <div id="effi-src"></div>
       </article>
     </section>
 

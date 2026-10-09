@@ -8,10 +8,10 @@ import { initChapter1 } from './sections/chapter1.js';
 import { initCard } from './sections/card.js';
 import { initMethod } from './sections/method.js';
 import { buildChapter3, initChapter3 } from './industry/chapter3.js';
+import { initEfficiency } from './sections/efficiency.js';
 
 import { timeline } from './charts/timeline.js';
 import { factorSankey } from './charts/factorSankey.js';
-import { fiveDims } from './charts/fiveDims.js';
 import { industryCompass } from './charts/industryCompass.js';
 import { impactPanel } from './charts/impactPanel.js';
 import { impactHeatmap } from './charts/impactHeatmap.js';
@@ -21,7 +21,7 @@ import { jobSunburst } from './charts/jobSunburst.js';
 
 // data-chart 名称 → 绘制函数
 const CHARTS = {
-  timeline, factorSankey, fiveDims, industryCompass,
+  timeline, factorSankey, industryCompass,
   impactPanel, impactHeatmap, riskEnergy, riskJobs, dayClock, jobSunburst,
 };
 
@@ -56,7 +56,8 @@ async function boot() {
     console.warn('WebGL 不可用，跳过粒子效果', err);
   }
 
-  initChapter1(particles); // 第一章的钉住区段需先于其后的触发器创建
+  initChapter1(particles); // 钉住区段按页面顺序创建：第一章 → 2.2 → 第三章
+  initEfficiency();
   initChapter3(inds, particles);
   initNav(lenis);
   initCard();

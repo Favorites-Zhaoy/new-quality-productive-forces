@@ -9,7 +9,7 @@ export const DATA_FILES = [
   'china_employment.json',
   'policy_timeline.json',
   'factors_sankey.json',
-  'five_dims.json',
+  'efficiency.json',
   'industries.json',
   'impact_stats.json',
   'impact_matrix.json',
@@ -17,6 +17,8 @@ export const DATA_FILES = [
   'risk_jobs.json',
   'day_clock.json',
   'job_tasks.json',
+  'deep/C.json',
+  'deep/I.json',
   ...'ABCDEFGHIJKLMNOPQRST'.split('').map((c) => `industries/${c}.json`),
 ];
 

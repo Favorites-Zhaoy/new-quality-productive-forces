@@ -276,7 +276,7 @@ function rewind(geo) {
   });
   return geo;
 }
-const loadChina = () => (chinaGeo ??= d3.json(`${import.meta.env.BASE_URL}geo/china.json`).then(rewind));
+export const loadChina = () => (chinaGeo ??= d3.json(`${import.meta.env.BASE_URL}geo/china.json`).then(rewind));
 
 export function china(el, spec) {
   loadChina().then((geo) => mount(el, (svg, W, H, animate) => {

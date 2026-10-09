@@ -1,0 +1,356 @@
+{
+ "meta": {
+  "id": "ind_M",
+  "title": "M 科学研究和技术服务业",
+  "source": "国家统计局、WIPO、Nature 论文、EMBL-EBI、PDBj、中国气象局（各图另附来源）",
+  "url": "",
+  "status": "src",
+  "note": "R&D 投入强度因 GDP 修订存在回溯差异；“850 倍”为两个公开数字的计算值；诺贝尔奖数字来自官网新闻稿原句。",
+  "usedIn": "第三章 · M"
+ },
+ "lede": "AI 正在成为科研的“新仪器”：过去需要几十年实验积累的结果，现在可以用模型在几年内预测出来。",
+ "headline": {
+  "value": "2.14",
+  "unit": "亿个",
+  "label": "AlphaFold 数据库收录的 AI 预测蛋白质结构，约为 PDB 自 1971 年建库以来实验解析结构总数（25 万）的 850 多倍",
+  "source": "EMBL-EBI / Google DeepMind；PDBj（2026 年 3 月）",
+  "url": "https://mail.ncmir.ucsd.edu/pipermail/3dem/2022-July/009752.html"
+ },
+ "change": {
+  "text": "蛋白质结构、天气预报、专利与模型，科研的几个关键环节都已经能看到 AI 带来的数量级变化。2024 年诺贝尔化学奖授予了蛋白质结构预测；中国的生成式 AI 专利数量居全球首位。",
+  "charts": [
+   {
+    "viz": "dots",
+    "span": 2,
+    "height": 440,
+    "title": "半个世纪的实验 vs 几年的 AI 预测",
+    "sub": "左上角两个半蓝点，是 1971 年以来全部实验解析的蛋白质结构",
+    "unit_per_dot": 100000,
+    "unit": "个结构",
+    "data": [
+     {
+      "label": "PDB 实验解析结构（1971—2026.03 累计）",
+      "value": 250441,
+      "color": "--c-blue"
+     },
+     {
+      "label": "AlphaFold DB AI 预测结构",
+      "value": 214000000,
+      "color": "--c-red"
+     }
+    ],
+    "source": "PDBj（PDB 250k 公告）；EMBL-EBI AlphaFold DB",
+    "url": "https://pdbj.org/news/PDB250k"
+   },
+   {
+    "viz": "barline",
+    "title": "全社会 R&D 经费与投入强度",
+    "unit": "亿元",
+    "yName": "R&D 经费（亿元）",
+    "y2Name": "投入强度（% GDP）",
+    "y2Unit": "%",
+    "y2Zero": false,
+    "data": [
+     {
+      "x": 2020,
+      "y": 24393.1,
+      "y2": 2.41
+     },
+     {
+      "x": 2021,
+      "y": 27956.3,
+      "y2": 2.44
+     },
+     {
+      "x": 2022,
+      "y": 30782.9,
+      "y2": 2.54
+     },
+     {
+      "x": 2023,
+      "y": 33357.1,
+      "y2": 2.65
+     },
+     {
+      "x": 2024,
+      "y": 36326.8,
+      "y2": 2.69
+     },
+     {
+      "x": 2025,
+      "y": 39262,
+      "y2": 2.8
+     }
+    ],
+    "source": "国家统计局 全国科技经费投入统计公报 / 统计公报",
+    "url": "https://www.stats.gov.cn/sj/zxfb/202509/t20250929_1961429.html",
+    "note": "强度取各年公报首发值，因 GDP 修订存在回溯差异；2025 年首次超过 OECD 国家平均水平。"
+   },
+   {
+    "viz": "compare",
+    "title": "AI 气象大模型 vs 传统数值预报",
+    "rowH": 78,
+    "data": [
+     {
+      "label": "台风路径 3 天位置误差（盘古 vs ECMWF-HRES）",
+      "before": 162.28,
+      "after": 120.29,
+      "unit": "km",
+      "beforeLabel": "数值预报",
+      "afterLabel": "盘古"
+     },
+     {
+      "label": "台风路径 5 天位置误差",
+      "before": 272.1,
+      "after": 195.65,
+      "unit": "km",
+      "beforeLabel": "数值预报",
+      "afterLabel": "盘古"
+     },
+     {
+      "label": "MJO 有效预报时长（伏羲次季节模型）",
+      "before": 30,
+      "after": 36,
+      "unit": "天",
+      "beforeLabel": "此前",
+      "afterLabel": "伏羲",
+      "delta": "+6 天"
+     }
+    ],
+    "source": "Bi et al., Nature 619 (2023)；复旦大学新闻网（FuXi）",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10356604",
+    "note": "不同模型、不同论文的指标，仅作“AI vs 基线”对照。"
+   },
+   {
+    "viz": "stats",
+    "title": "预报速度的数量级变化",
+    "data": [
+     {
+      "value": "1.4",
+      "unit": "秒",
+      "label": "盘古气象完成 24 小时全球预报（单张 V100 GPU）；传统数值预报需超算数小时"
+     },
+     {
+      "value": "10000",
+      "unit": "倍+",
+      "label": "盘古较业务 IFS 的提速（论文原文 more than 10,000-times faster）"
+     },
+     {
+      "value": "100",
+      "unit": "毫秒",
+      "label": "伏羲 FuXi-Weather 完成一次数据同化，提速千倍以上"
+     },
+     {
+      "value": "10.5",
+      "unit": "天+",
+      "label": "中国气象局“风清”全球有效预报时效"
+     }
+    ],
+    "source": "Nature 论文（盘古）；复旦大学；新华网（中国气象局）",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10356604"
+   },
+   {
+    "viz": "rank",
+    "title": "生成式 AI 专利发明数量（2014—2023 累计）",
+    "unit": "项",
+    "highlight": [
+     "中国"
+    ],
+    "data": [
+     {
+      "label": "中国",
+      "value": 38210
+     },
+     {
+      "label": "美国",
+      "value": 6276
+     },
+     {
+      "label": "韩国",
+      "value": 4155
+     },
+     {
+      "label": "日本",
+      "value": 3409
+     },
+     {
+      "label": "印度",
+      "value": 1350
+     }
+    ],
+    "source": "WIPO《生成式人工智能专利态势报告》",
+    "url": "https://www.wipo.int/pressroom/en/articles/2024/article_0009.html",
+    "note": "按发明人所在地统计，中国约为第二名美国的 6 倍。"
+   },
+   {
+    "viz": "rank",
+    "title": "生成式 AI 专利前十大申请人",
+    "unit": "项",
+    "highlight": [
+     "腾讯",
+     "平安保险",
+     "百度",
+     "中国科学院",
+     "阿里巴巴",
+     "字节跳动"
+    ],
+    "data": [
+     {
+      "label": "腾讯",
+      "value": 2074
+     },
+     {
+      "label": "平安保险",
+      "value": 1564
+     },
+     {
+      "label": "百度",
+      "value": 1234
+     },
+     {
+      "label": "中国科学院",
+      "value": 607
+     },
+     {
+      "label": "IBM",
+      "value": 601
+     },
+     {
+      "label": "阿里巴巴",
+      "value": 571
+     },
+     {
+      "label": "三星电子",
+      "value": 468
+     },
+     {
+      "label": "Alphabet",
+      "value": 443
+     },
+     {
+      "label": "字节跳动",
+      "value": 418
+     },
+     {
+      "label": "微软",
+      "value": 377
+     }
+    ],
+    "source": "WIPO Patent Landscape Report: Generative AI",
+    "url": "https://www.wipo.int/pressroom/en/articles/2024/article_0009.html",
+    "note": "红色为中国机构，前十中占 6 席。"
+   }
+  ]
+ },
+ "cases": [
+  {
+   "date": "2024-10",
+   "title": "AlphaFold获2024年诺贝尔化学奖",
+   "entity": "Google DeepMind（Demis Hassabis、John Jumper）；华盛顿大学David Baker",
+   "summary": "瑞典皇家科学院将2024年诺贝尔化学奖一半授予Baker（计算蛋白质设计），另一半授予Hassabis与Jumper（蛋白质结构预测）。AlphaFold2几乎预测了研究者已识别的全部约2亿种蛋白质的结构，AI成为基础科学发现工具。",
+   "figures": [
+    {
+     "label": "可预测蛋白质结构",
+     "value": "约2亿种"
+    },
+    {
+     "label": "使用者",
+     "value": "190个国家的200多万人"
+    }
+   ],
+   "source": "诺贝尔奖官网新闻稿（页面直接抓取被403拒绝，数字来自搜索结果中的新闻稿原句）",
+   "url": "https://www.nobelprize.org/prizes/chemistry/2024/press-release/"
+  },
+  {
+   "date": "2025-12",
+   "title": "中国气象局发布“风清”“风雷”“风顺”AI气象大模型升级版",
+   "entity": "中国气象局（风雷与清华大学联合研发）",
+   "summary": "中国气象局AI气象模型体系覆盖临近、中期到次季节预报。风清全球有效预报时效超10.5天；风雷实现全国1公里分辨率、逐10分钟的未来3小时降水格点预报；风顺每日提供100个集合成员的60天预测。",
+   "figures": [
+    {
+     "label": "风清全球有效预报时效",
+     "value": "超10.5天"
+    },
+    {
+     "label": "风雷强回波预报质量提升",
+     "value": "超25%"
+    },
+    {
+     "label": "风顺集合预报",
+     "value": "100个成员、60天"
+    },
+    {
+     "label": "风顺大气季节内振荡有效预测",
+     "value": "32天"
+    }
+   ],
+   "source": "新华网《“人工智能+气象” 让天气“变幻可测”》2025-12-06",
+   "url": "https://www.news.cn/tech/20251206/93b4002c213549efa784691a38dbb8f9/c.html"
+  },
+  {
+   "date": "2026-04",
+   "title": "中国科学院发布“磐石100”科研大模型体系",
+   "entity": "中国科学院",
+   "summary": "以“磐石·科学基础大模型”（2025年7月发布）为底座，面向数学、物理、材料、天文、环境、空天、地理、生物8大学科打造学科领域大模型，已覆盖百余个科研场景。",
+   "figures": [
+    {
+     "label": "深度调研任务完成时间",
+     "value": "缩短60%以上"
+    },
+    {
+     "label": "论文/PPT/报告制作效率",
+     "value": "提升5至10倍"
+    },
+    {
+     "label": "可调用科研工具",
+     "value": "2000余个"
+    },
+    {
+     "label": "科学推理训练数据",
+     "value": "650万条"
+    }
+   ],
+   "source": "新华网 2026-04-29",
+   "url": "https://www.news.cn/tech/20260429/053ffc3079954bf38cbace9fbc68c7c9/c.html"
+  },
+  {
+   "date": "2025-07",
+   "title": "复旦“伏羲”FuXi-Weather：首个业务可用的观测到预报端到端AI系统",
+   "entity": "复旦大学、上海科学智能研究院、中国气象局等",
+   "summary": "成果发表于Nature Communications。数据同化速度较数值模式提升千倍以上，约100毫秒完成一次同化；伏羲中期模型提前3天成功预测台风“贝碧嘉”在上海登陆。",
+   "figures": [
+    {
+     "label": "单次数据同化耗时",
+     "value": "约100ms（提速千倍以上）"
+    },
+    {
+     "label": "Z500有效预报",
+     "value": "9.5天 vs HRES 9.25天"
+    },
+    {
+     "label": "台风贝碧嘉登陆预测",
+     "value": "提前3天"
+    }
+   ],
+   "source": "复旦大学新闻网 2025-07-23",
+   "url": "https://news.fudan.edu.cn/2025/0723/c5a146311/page.htm"
+  }
+ ],
+ "future": [
+  {
+   "text": "“人工智能+”科学技术：加快探索人工智能驱动的新型科研范式，加速“从0到1”重大科学发现进程；推动人工智能驱动的技术研发、工程实现、产品落地一体化协同发展。",
+   "source": "国务院《关于深入实施“人工智能+”行动的意见》（国发〔2025〕11号）",
+   "url": "https://www.gov.cn/zhengce/content/202508/content_7037861.htm"
+  },
+  {
+   "text": "到2027年新一代智能终端、智能体等应用普及率超70%；到2030年超90%；到2035年全面步入智能经济和智能社会发展新阶段。",
+   "source": "国务院《关于深入实施“人工智能+”行动的意见》（国发〔2025〕11号）",
+   "url": "https://www.gov.cn/zhengce/content/202508/content_7037861.htm"
+  },
+  {
+   "text": "2025年研发经费投入强度达2.8%，首次超过OECD国家平均水平；“十四五”时期强度提高0.44个百分点。",
+   "source": "中国政府网《从0.44个百分点看科技创新“加速度”》2026-02-10",
+   "url": "https://www.gov.cn/yaowen/liebiao/202602/content_7057567.htm"
+  }
+ ]
+}

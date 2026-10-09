@@ -1,0 +1,41 @@
+{
+  "meta": {
+    "id": "factors_sankey",
+    "title": "生产要素经由人工智能流向新质生产力三要素",
+    "source": "本项目概念模型（依据新质生产力“三要素”官方表述构建）",
+    "url": "",
+    "status": "demo",
+    "note": "流量宽度表示概念上的相对重要性，不代表统计数值。",
+    "usedIn": "2.1 生产要素的重新组合"
+  },
+  "columns": ["传统与新型要素", "技术中枢", "新质生产力三要素", "核心标志"],
+  "nodes": [
+    { "id": "labor",   "name": "劳动",   "col": 0, "color": "--c-ochre",  "desc": "人的体力与智力投入" },
+    { "id": "capital", "name": "资本",   "col": 0, "color": "--c-ochre",  "desc": "厂房、设备与资金" },
+    { "id": "land",    "name": "土地",   "col": 0, "color": "--c-ochre",  "desc": "自然资源与空间" },
+    { "id": "tech",    "name": "技术",   "col": 0, "color": "--c-ochre",  "desc": "知识与工艺积累" },
+    { "id": "data",    "name": "数据",   "col": 0, "color": "--c-red",    "desc": "2020 年起被正式列为新型生产要素" },
+    { "id": "ai",      "name": "人工智能（算力 · 算法 · 数据）", "col": 1, "color": "--c-red", "desc": "把数据加工为知识与决策的通用目的技术" },
+    { "id": "worker",  "name": "新型劳动者",   "col": 2, "color": "--c-blue", "desc": "能驾驭 AI 工具的高素质劳动者，以及人机协同的新岗位" },
+    { "id": "means",   "name": "新型劳动资料", "col": 2, "color": "--c-blue", "desc": "大模型、智能装备、工业软件等新工具" },
+    { "id": "object",  "name": "新型劳动对象", "col": 2, "color": "--c-blue", "desc": "数据、新材料、新能源等被拓展的生产对象" },
+    { "id": "tfp",     "name": "全要素生产率跃升", "col": 3, "color": "--c-teal", "desc": "新质生产力的核心标志" }
+  ],
+  "links": [
+    { "source": "labor",   "target": "worker", "value": 3 },
+    { "source": "labor",   "target": "ai",     "value": 1.5 },
+    { "source": "capital", "target": "ai",     "value": 2.5 },
+    { "source": "capital", "target": "means",  "value": 2 },
+    { "source": "land",    "target": "object", "value": 1.5 },
+    { "source": "tech",    "target": "ai",     "value": 3 },
+    { "source": "tech",    "target": "means",  "value": 1 },
+    { "source": "data",    "target": "ai",     "value": 4 },
+    { "source": "data",    "target": "object", "value": 2 },
+    { "source": "ai",      "target": "worker", "value": 3.5 },
+    { "source": "ai",      "target": "means",  "value": 4.5 },
+    { "source": "ai",      "target": "object", "value": 3 },
+    { "source": "worker",  "target": "tfp",    "value": 6.5 },
+    { "source": "means",   "target": "tfp",    "value": 7.5 },
+    { "source": "object",  "target": "tfp",    "value": 6.5 }
+  ]
+}

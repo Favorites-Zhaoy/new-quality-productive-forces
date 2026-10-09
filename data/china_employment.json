@@ -1,0 +1,544 @@
+{
+ "meta": {
+  "id": "china_employment",
+  "title": "中国三次产业就业人员（1952—2024）",
+  "source": "国家统计局《中国统计年鉴 2025》表 4-2 按三次产业分就业人员数（年底数）",
+  "url": "https://www.stats.gov.cn/sj/ndsj/2025/html/C04-02.jpg",
+  "status": "ok",
+  "unit": "万人；构成为 %",
+  "note": "由官方表格图片转录（原图与转录 CSV 见 data/raw/），已逐年校验三次产业之和等于合计。1990 年就业人员数较 1989 年跳升，系统计口径调整所致。",
+  "usedIn": "1.2 七十年的人口迁徙"
+ },
+ "data": [
+  {
+   "year": 1952,
+   "total": 20729,
+   "primary": 17317,
+   "secondary": 1531,
+   "tertiary": 1881,
+   "p1": 83.5,
+   "p2": 7.4,
+   "p3": 9.1
+  },
+  {
+   "year": 1957,
+   "total": 23771,
+   "primary": 19309,
+   "secondary": 2142,
+   "tertiary": 2320,
+   "p1": 81.2,
+   "p2": 9.0,
+   "p3": 9.8
+  },
+  {
+   "year": 1962,
+   "total": 25910,
+   "primary": 21276,
+   "secondary": 2059,
+   "tertiary": 2575,
+   "p1": 82.1,
+   "p2": 8.0,
+   "p3": 9.9
+  },
+  {
+   "year": 1965,
+   "total": 28670,
+   "primary": 23396,
+   "secondary": 2408,
+   "tertiary": 2866,
+   "p1": 81.6,
+   "p2": 8.4,
+   "p3": 10.0
+  },
+  {
+   "year": 1970,
+   "total": 34432,
+   "primary": 27811,
+   "secondary": 3518,
+   "tertiary": 3103,
+   "p1": 80.8,
+   "p2": 10.2,
+   "p3": 9.0
+  },
+  {
+   "year": 1975,
+   "total": 38168,
+   "primary": 29456,
+   "secondary": 5152,
+   "tertiary": 3560,
+   "p1": 77.2,
+   "p2": 13.5,
+   "p3": 9.3
+  },
+  {
+   "year": 1978,
+   "total": 40152,
+   "primary": 28318,
+   "secondary": 6945,
+   "tertiary": 4890,
+   "p1": 70.5,
+   "p2": 17.3,
+   "p3": 12.2
+  },
+  {
+   "year": 1979,
+   "total": 41024,
+   "primary": 28634,
+   "secondary": 7214,
+   "tertiary": 5177,
+   "p1": 69.8,
+   "p2": 17.6,
+   "p3": 12.6
+  },
+  {
+   "year": 1980,
+   "total": 42361,
+   "primary": 29122,
+   "secondary": 7707,
+   "tertiary": 5532,
+   "p1": 68.7,
+   "p2": 18.2,
+   "p3": 13.1
+  },
+  {
+   "year": 1981,
+   "total": 43725,
+   "primary": 29777,
+   "secondary": 8003,
+   "tertiary": 5945,
+   "p1": 68.1,
+   "p2": 18.3,
+   "p3": 13.6
+  },
+  {
+   "year": 1982,
+   "total": 45295,
+   "primary": 30859,
+   "secondary": 8346,
+   "tertiary": 6090,
+   "p1": 68.1,
+   "p2": 18.4,
+   "p3": 13.5
+  },
+  {
+   "year": 1983,
+   "total": 46436,
+   "primary": 31151,
+   "secondary": 8679,
+   "tertiary": 6606,
+   "p1": 67.1,
+   "p2": 18.7,
+   "p3": 14.2
+  },
+  {
+   "year": 1984,
+   "total": 48197,
+   "primary": 30868,
+   "secondary": 9590,
+   "tertiary": 7739,
+   "p1": 64.0,
+   "p2": 19.9,
+   "p3": 16.1
+  },
+  {
+   "year": 1985,
+   "total": 49873,
+   "primary": 31130,
+   "secondary": 10384,
+   "tertiary": 8359,
+   "p1": 62.4,
+   "p2": 20.8,
+   "p3": 16.8
+  },
+  {
+   "year": 1986,
+   "total": 51282,
+   "primary": 31254,
+   "secondary": 11216,
+   "tertiary": 8811,
+   "p1": 60.9,
+   "p2": 21.9,
+   "p3": 17.2
+  },
+  {
+   "year": 1987,
+   "total": 52783,
+   "primary": 31663,
+   "secondary": 11726,
+   "tertiary": 9395,
+   "p1": 60.0,
+   "p2": 22.2,
+   "p3": 17.8
+  },
+  {
+   "year": 1988,
+   "total": 54334,
+   "primary": 32249,
+   "secondary": 12152,
+   "tertiary": 9933,
+   "p1": 59.3,
+   "p2": 22.4,
+   "p3": 18.3
+  },
+  {
+   "year": 1989,
+   "total": 55329,
+   "primary": 33225,
+   "secondary": 11976,
+   "tertiary": 10129,
+   "p1": 60.1,
+   "p2": 21.6,
+   "p3": 18.3
+  },
+  {
+   "year": 1990,
+   "total": 64749,
+   "primary": 38914,
+   "secondary": 13856,
+   "tertiary": 11979,
+   "p1": 60.1,
+   "p2": 21.4,
+   "p3": 18.5
+  },
+  {
+   "year": 1991,
+   "total": 65491,
+   "primary": 39098,
+   "secondary": 14015,
+   "tertiary": 12378,
+   "p1": 59.7,
+   "p2": 21.4,
+   "p3": 18.9
+  },
+  {
+   "year": 1992,
+   "total": 66152,
+   "primary": 38699,
+   "secondary": 14355,
+   "tertiary": 13098,
+   "p1": 58.5,
+   "p2": 21.7,
+   "p3": 19.8
+  },
+  {
+   "year": 1993,
+   "total": 66808,
+   "primary": 37680,
+   "secondary": 14965,
+   "tertiary": 14163,
+   "p1": 56.4,
+   "p2": 22.4,
+   "p3": 21.2
+  },
+  {
+   "year": 1994,
+   "total": 67455,
+   "primary": 36628,
+   "secondary": 15312,
+   "tertiary": 15515,
+   "p1": 54.3,
+   "p2": 22.7,
+   "p3": 23.0
+  },
+  {
+   "year": 1995,
+   "total": 68065,
+   "primary": 35530,
+   "secondary": 15655,
+   "tertiary": 16880,
+   "p1": 52.2,
+   "p2": 23.0,
+   "p3": 24.8
+  },
+  {
+   "year": 1996,
+   "total": 68950,
+   "primary": 34820,
+   "secondary": 16203,
+   "tertiary": 17927,
+   "p1": 50.5,
+   "p2": 23.5,
+   "p3": 26.0
+  },
+  {
+   "year": 1997,
+   "total": 69820,
+   "primary": 34840,
+   "secondary": 16547,
+   "tertiary": 18432,
+   "p1": 49.9,
+   "p2": 23.7,
+   "p3": 26.4
+  },
+  {
+   "year": 1998,
+   "total": 70637,
+   "primary": 35177,
+   "secondary": 16600,
+   "tertiary": 18860,
+   "p1": 49.8,
+   "p2": 23.5,
+   "p3": 26.7
+  },
+  {
+   "year": 1999,
+   "total": 71394,
+   "primary": 35768,
+   "secondary": 16421,
+   "tertiary": 19205,
+   "p1": 50.1,
+   "p2": 23.0,
+   "p3": 26.9
+  },
+  {
+   "year": 2000,
+   "total": 72085,
+   "primary": 36043,
+   "secondary": 16219,
+   "tertiary": 19823,
+   "p1": 50.0,
+   "p2": 22.5,
+   "p3": 27.5
+  },
+  {
+   "year": 2001,
+   "total": 72797,
+   "primary": 36399,
+   "secondary": 16234,
+   "tertiary": 20165,
+   "p1": 50.0,
+   "p2": 22.3,
+   "p3": 27.7
+  },
+  {
+   "year": 2002,
+   "total": 73280,
+   "primary": 36640,
+   "secondary": 15682,
+   "tertiary": 20958,
+   "p1": 50.0,
+   "p2": 21.4,
+   "p3": 28.6
+  },
+  {
+   "year": 2003,
+   "total": 73736,
+   "primary": 36204,
+   "secondary": 15927,
+   "tertiary": 21605,
+   "p1": 49.1,
+   "p2": 21.6,
+   "p3": 29.3
+  },
+  {
+   "year": 2004,
+   "total": 74264,
+   "primary": 34830,
+   "secondary": 16709,
+   "tertiary": 22725,
+   "p1": 46.9,
+   "p2": 22.5,
+   "p3": 30.6
+  },
+  {
+   "year": 2005,
+   "total": 74647,
+   "primary": 33442,
+   "secondary": 17766,
+   "tertiary": 23439,
+   "p1": 44.8,
+   "p2": 23.8,
+   "p3": 31.4
+  },
+  {
+   "year": 2006,
+   "total": 74978,
+   "primary": 31941,
+   "secondary": 18894,
+   "tertiary": 24143,
+   "p1": 42.6,
+   "p2": 25.2,
+   "p3": 32.2
+  },
+  {
+   "year": 2007,
+   "total": 75321,
+   "primary": 30731,
+   "secondary": 20186,
+   "tertiary": 24404,
+   "p1": 40.8,
+   "p2": 26.8,
+   "p3": 32.4
+  },
+  {
+   "year": 2008,
+   "total": 75564,
+   "primary": 29923,
+   "secondary": 20553,
+   "tertiary": 25087,
+   "p1": 39.6,
+   "p2": 27.2,
+   "p3": 33.2
+  },
+  {
+   "year": 2009,
+   "total": 75828,
+   "primary": 28890,
+   "secondary": 21080,
+   "tertiary": 25857,
+   "p1": 38.1,
+   "p2": 27.8,
+   "p3": 34.1
+  },
+  {
+   "year": 2010,
+   "total": 76105,
+   "primary": 27931,
+   "secondary": 21842,
+   "tertiary": 26332,
+   "p1": 36.7,
+   "p2": 28.7,
+   "p3": 34.6
+  },
+  {
+   "year": 2011,
+   "total": 76196,
+   "primary": 26472,
+   "secondary": 22539,
+   "tertiary": 27185,
+   "p1": 34.7,
+   "p2": 29.6,
+   "p3": 35.7
+  },
+  {
+   "year": 2012,
+   "total": 76254,
+   "primary": 25535,
+   "secondary": 23226,
+   "tertiary": 27493,
+   "p1": 33.5,
+   "p2": 30.4,
+   "p3": 36.1
+  },
+  {
+   "year": 2013,
+   "total": 76301,
+   "primary": 23838,
+   "secondary": 23142,
+   "tertiary": 29321,
+   "p1": 31.3,
+   "p2": 30.3,
+   "p3": 38.4
+  },
+  {
+   "year": 2014,
+   "total": 76349,
+   "primary": 22372,
+   "secondary": 23057,
+   "tertiary": 30920,
+   "p1": 29.3,
+   "p2": 30.2,
+   "p3": 40.5
+  },
+  {
+   "year": 2015,
+   "total": 76320,
+   "primary": 21418,
+   "secondary": 22644,
+   "tertiary": 32258,
+   "p1": 28.0,
+   "p2": 29.7,
+   "p3": 42.3
+  },
+  {
+   "year": 2016,
+   "total": 76245,
+   "primary": 20908,
+   "secondary": 22295,
+   "tertiary": 33042,
+   "p1": 27.4,
+   "p2": 29.3,
+   "p3": 43.3
+  },
+  {
+   "year": 2017,
+   "total": 76058,
+   "primary": 20295,
+   "secondary": 21762,
+   "tertiary": 34001,
+   "p1": 26.7,
+   "p2": 28.6,
+   "p3": 44.7
+  },
+  {
+   "year": 2018,
+   "total": 75782,
+   "primary": 19515,
+   "secondary": 21356,
+   "tertiary": 34911,
+   "p1": 25.7,
+   "p2": 28.2,
+   "p3": 46.1
+  },
+  {
+   "year": 2019,
+   "total": 75447,
+   "primary": 18652,
+   "secondary": 21234,
+   "tertiary": 35561,
+   "p1": 24.7,
+   "p2": 28.2,
+   "p3": 47.1
+  },
+  {
+   "year": 2020,
+   "total": 75064,
+   "primary": 17715,
+   "secondary": 21543,
+   "tertiary": 35806,
+   "p1": 23.6,
+   "p2": 28.7,
+   "p3": 47.7
+  },
+  {
+   "year": 2021,
+   "total": 74652,
+   "primary": 17072,
+   "secondary": 21712,
+   "tertiary": 35868,
+   "p1": 22.9,
+   "p2": 29.1,
+   "p3": 48.0
+  },
+  {
+   "year": 2022,
+   "total": 73351,
+   "primary": 17663,
+   "secondary": 21105,
+   "tertiary": 34583,
+   "p1": 24.1,
+   "p2": 28.8,
+   "p3": 47.1
+  },
+  {
+   "year": 2023,
+   "total": 74041,
+   "primary": 16882,
+   "secondary": 21520,
+   "tertiary": 35639,
+   "p1": 22.8,
+   "p2": 29.1,
+   "p3": 48.1
+  },
+  {
+   "year": 2024,
+   "total": 73439,
+   "primary": 16298,
+   "secondary": 21275,
+   "tertiary": 35866,
+   "p1": 22.2,
+   "p2": 29.0,
+   "p3": 48.8
+  }
+ ]
+}

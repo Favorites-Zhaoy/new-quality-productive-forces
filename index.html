@@ -1,0 +1,376 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>智能跃迁 · 人工智能与新质生产力</title>
+  <meta name="description" content="用数据可视化讲述人工智能如何成为推动新质生产力发展的重要技术力量。" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 64 64%22%3E%3Crect width=%2264%22 height=%2264%22 rx=%2214%22 fill=%22%23BF5A45%22/%3E%3Ctext x=%2232%22 y=%2246%22 font-size=%2240%22 text-anchor=%22middle%22 fill=%22%23F4F2ED%22 font-family=%22serif%22 font-weight=%22900%22%3E%E6%99%BA%3C/text%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&family=Noto+Serif+SC:wght@400;600;700;900&family=Noto+Sans+SC:wght@400;500;700&family=Cinzel:wght@400;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <script type="module" crossorigin src="./assets/index-BGoqp43g.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/index-DCD-NLEK.css">
+</head>
+<body>
+  <!-- 油墨质感滤镜：给大标题加“印刷”边缘 -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <filter id="ink-rough">
+      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" seed="3" result="noise" />
+      <feDisplacementMap in="SourceGraphic" in2="noise" scale="1.8" xChannelSelector="R" yChannelSelector="G" result="displaced" />
+      <feTurbulence type="fractalNoise" baseFrequency="1.6" numOctaves="1" seed="9" result="speck" />
+      <feColorMatrix in="speck" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 -1.5 1.42" result="mask" />
+      <feComposite in="displaced" in2="mask" operator="in" />
+    </filter>
+  </svg>
+
+  <div class="loader" id="loader">
+    <div class="loader__mark">智</div>
+    <div class="loader__bar"><span></span></div>
+  </div>
+
+  <canvas id="particles" class="particles" aria-hidden="true"></canvas>
+  <div class="progress" aria-hidden="true"><span id="progress-bar"></span></div>
+
+  <!-- 报头条：仿报纸版面 -->
+  <header class="topbar" id="topbar">
+    <div class="topbar__left">
+      <span class="topbar__brand">智能跃迁</span>
+      <span class="topbar__rule"></span>
+      <span class="topbar__page">第 <b id="page-no">00</b> 版</span>
+    </div>
+    <nav class="topbar__nav" aria-label="章节导航">
+      <a href="#ch1" data-nav="ch1"><i>01</i>历史跃迁</a>
+      <a href="#ch2" data-nav="ch2"><i>02</i>驱动机制</a>
+      <a href="#ch3" data-nav="ch3"><i>03</i>行业重塑</a>
+      <a href="#ch4" data-nav="ch4"><i>04</i>整体影响</a>
+      <a href="#ch5" data-nav="ch5"><i>05</i>人机协同</a>
+    </nav>
+    <div class="topbar__date" id="today"></div>
+  </header>
+
+  <main id="smooth">
+
+    <!-- ===================== 序章 ===================== -->
+    <section class="hero" id="hero" data-page="00">
+      <div class="hero__mast">
+        <h1 class="masthead" data-split>智能跃迁</h1>
+        <p class="mast-en">NEW&nbsp;QUALITY&nbsp;PRODUCTIVE&nbsp;FORCES</p>
+      </div>
+      <div class="hero__q">
+        <p class="ink-title hero__q1">什么是</p>
+        <p class="ink-title hero__q2"><span class="q">“</span>新质生产力<span class="q">”</span></p>
+        <p class="hero__sub">以及，人工智能为什么能成为推动新质生产力发展的重要技术力量</p>
+      </div>
+      <ul class="hero__foot">
+        <li>历史跃迁</li><li>驱动机制</li><li>行业重塑</li><li>整体影响</li><li>人机协同</li>
+      </ul>
+      <div class="scroll-hint"><span>向下阅读</span><i></i></div>
+    </section>
+
+    <!-- ===================== 第一章 ===================== -->
+    <section class="chapter" id="ch1" data-page="01">
+      <div class="chapter-head">
+        <div class="vtitle-col">
+          <span class="chapter-no">01</span>
+          <h2 class="vtitle ink-title">从锄头到算法</h2>
+          <p class="vsub">生产力的四次跃迁</p>
+        </div>
+        <div class="lede columns-3" data-reveal>
+          <p><b>生产力</b>是人类改造自然、创造财富的能力。在工业革命之前漫长的岁月里，它几乎停滞：一个农民一年的产出，与他的祖辈相差无几。</p>
+          <p>直到工具开始“自己动起来”。蒸汽机把肌肉换成了机械，电力和流水线把单个工匠换成了工厂体系，计算机和互联网又把纸面的流程变成了比特流。</p>
+          <p>每一次跃迁，都不是某一台机器的胜利，而是<b>劳动者、劳动资料、劳动对象</b>三者组合方式的重构。今天，人工智能正在开启第四次重构——它第一次让工具具备了“理解”和“决策”的能力。</p>
+          <p>本章用两组真实数据回看这段历程：四百年的人均产出曲线与四个时代的工具演化，以及中国七十年的劳动者迁徙；最后回到“新质生产力”被提出的关键节点。</p>
+        </div>
+      </div>
+
+      <!-- 1.1 四个时代，一条曲线（钉住 + 横向推进 + 粒子变形） -->
+      <article class="longroll" id="longroll">
+        <div class="longroll__pin">
+          <header class="longroll__head">
+            <span class="block-no">1.1</span>
+            <h3>四个时代，一条曲线</h3>
+            <p>继续向下滚动，沿着时间走一遍：世界、中国、英国的人均 GDP（2011 年国际元，1600—2025 年），以及每个时代改变生产的“工具”。</p>
+          </header>
+          <p class="longroll__caption" id="lr-caption"></p>
+          <div class="longroll__chart"></div>
+          <aside class="longroll__side">
+            <div class="longroll__meter">
+              <div class="longroll__year"><b id="lr-year">1600</b><small>年</small></div>
+              <div class="longroll__value"><span>世界人均 GDP</span><b id="lr-value">1,009</b><small>国际元</small></div>
+            </div>
+            <div class="longroll__stage" aria-hidden="true">
+              <div class="longroll__mark" id="lr-mark">手</div>
+            </div>
+            <div class="longroll__era" id="lr-era"></div>
+            <ol class="longroll__steps" id="lr-steps"></ol>
+          </aside>
+          <div class="longroll__src"></div>
+        </div>
+      </article>
+
+      <!-- 1.2 七十年的人口迁徙（钉住 + 点阵迁移） -->
+      <article class="migrate" id="migrate">
+        <div class="migrate__pin">
+          <header class="migrate__head">
+            <span class="block-no">1.2</span>
+            <h3>七十年的人口迁徙</h3>
+            <p>每个点代表中国千分之一的就业人员。继续滚动，看他们如何从田间走进工厂，再走进写字楼。</p>
+          </header>
+          <div class="migrate__year"><b id="mg-year">1952</b></div>
+          <p class="migrate__note" id="mg-note"></p>
+          <div class="migrate__stage"></div>
+          <div class="migrate__src"></div>
+        </div>
+      </article>
+
+      <!-- 1.3 大事记 + 定义 -->
+      <article class="block" id="block-timeline">
+        <header class="block-head">
+          <span class="block-no">1.3</span>
+          <h3>新质生产力 · 大事记</h3>
+          <p>从人工智能国家规划，到“新质生产力”的提出，再到“人工智能+”行动。每个节点都可以点开阅读原文。</p>
+        </header>
+        <div class="tl" data-chart="timeline" data-src="policy_timeline.json"></div>
+
+        <figure class="define-mag" data-reveal>
+          <a class="define-mag__mast" href="https://www.qstheory.cn/yaowen/2024-02/01/c_1130071035.htm" target="_blank" rel="noopener" aria-label="求是网原文">
+            <img src="img/qiushi.png" alt="求是" />
+            <span>2024 年 2 月 1 日</span>
+          </a>
+          <div class="define-mag__body">
+            <span class="define-mag__kicker">什么是新质生产力</span>
+            <blockquote>
+              <p>新质生产力是<em>创新</em>起主导作用，摆脱传统经济增长方式、生产力发展路径，具有<em>高科技、高效能、高质量</em>特征，符合新发展理念的先进生产力质态。</p>
+              <p>它由<em>技术革命性突破、生产要素创新性配置、产业深度转型升级</em>而催生，以<b>劳动者、劳动资料、劳动对象及其优化组合的跃升</b>为基本内涵，以<b>全要素生产率大幅提升</b>为核心标志，特点是创新，关键在质优，本质是先进生产力。</p>
+            </blockquote>
+            <figcaption>
+              <span>习近平在中共中央政治局第十一次集体学习时强调<br/>加快发展新质生产力 扎实推进高质量发展</span>
+              <a href="https://www.qstheory.cn/yaowen/2024-02/01/c_1130071035.htm" target="_blank" rel="noopener">求是网 · 阅读原文 ↗</a>
+            </figcaption>
+          </div>
+        </figure>
+      </article>
+    </section>
+
+    <!-- ===================== 第二章 ===================== -->
+    <section class="chapter" id="ch2" data-page="02">
+      <div class="chapter-head">
+        <div class="vtitle-col">
+          <span class="chapter-no">02</span>
+          <h2 class="vtitle ink-title">为什么是人工智能</h2>
+          <p class="vsub">要素重组与效率跃升</p>
+        </div>
+        <div class="lede columns-3" data-reveal>
+          <p>不是所有新技术都能称为“新质生产力”。它必须同时改变<b>三要素</b>：让劳动者更强、让劳动资料更聪明、让劳动对象更广阔。</p>
+          <p>人工智能恰好三者兼备。它把<b>数据</b>变成可以加工的原料，把<b>算力和模型</b>变成新的生产工具，又把人从重复劳动中解放出来，去做更有创造性的工作。</p>
+          <p>下面先用一张要素流向图看清这种“重组”，再用三项随机对照实验，看 AI 让同一份工作<b>快了多少、好了多少、又让谁受益最多</b>。</p>
+        </div>
+      </div>
+
+      <article class="block" id="block-sankey">
+        <header class="block-head">
+          <span class="block-no">2.1</span>
+          <h3>生产要素的重新组合</h3>
+          <p>悬停任意节点或流带，查看传统要素与数据要素如何经由人工智能，流向新质生产力的三大内涵。</p>
+        </header>
+        <div class="chart chart--wide chart--tall" data-chart="factorSankey" data-src="factors_sankey.json"></div>
+      </article>
+
+      <!-- 2.2 效率：时间坍缩（钉住） -->
+      <article class="effi" id="effi">
+        <div class="effi__pin">
+          <div class="effi__copy">
+            <span class="block-no">2.2</span>
+            <h3>同一项任务，AI 省下多少时间</h3>
+            <p class="effi__intro">研究者招募 95 名专业程序员，随机分成两组，用 JavaScript 写同一个 HTTP 服务器，只有一组可以使用 AI 编程助手 GitHub Copilot。</p>
+            <div class="effi__clock">
+              <span id="ef-clock-label">不用 AI</span>
+              <b id="ef-clock">0.00</b><small>分钟</small>
+            </div>
+            <ol class="effi__steps">
+              <li class="effi__step is-on">右边的每个方块代表 <b>1 分钟</b>。不用 AI 的程序员，平均需要 <b>160.89</b> 分钟才能完成任务。</li>
+              <li class="effi__step">交给 AI 编程助手之后，同样的任务只用了 <b>71.17</b> 分钟，<b>快 55.8%</b>。</li>
+              <li class="effi__step">每完成一次，就省下近一个半小时。有意思的是：程序员们自己只预估了 <b>35%</b> 的提升，实际效果比他们想的还要大。</li>
+            </ol>
+          </div>
+          <div class="effi__stage"></div>
+        </div>
+      </article>
+
+      <article class="block" id="block-effi-more">
+        <header class="block-head">
+          <h3>不只是编程</h3>
+          <p>三项随机对照实验、三类知识型工作：对照组记为 100，红条是使用 AI 之后的水平。</p>
+        </header>
+        <div class="effi-studies" id="effi-studies"></div>
+
+        <header class="block-head effi-gap__head">
+          <h3>谁受益最多？</h3>
+          <p>AI 带来的提升并不平均：起点越低的人，受益越大。</p>
+        </header>
+        <div class="effi-gap" id="effi-gap"></div>
+        <div id="effi-src"></div>
+      </article>
+    </section>
+
+    <!-- ===================== 第三章（占位） ===================== -->
+    <section class="chapter" id="ch3" data-page="03">
+      <div class="chapter-head">
+        <div class="vtitle-col">
+          <span class="chapter-no">03</span>
+          <h2 class="vtitle ink-title">二十个行业的真实变化</h2>
+          <p class="vsub">依据《国民经济行业分类》</p>
+        </div>
+        <div class="lede columns-3" data-reveal>
+          <p>本章按照 GB/T 4754—2017《国民经济行业分类》的 <b>20 个门类</b>展开。每个行业统一采用三层结构：<b>最明显的变化</b>（数据可视化）、<b>最新真实案例</b>、<b>未来发展方向</b>。</p>
+          <p>每个行业的数据都来自政府部门、统计公报、权威机构与企业公开披露，图表下方均附有来源链接。</p>
+          <p>“行业罗盘”是本章的导航：点击任意扇区，即可跳转到对应行业。</p>
+        </div>
+      </div>
+      <div class="compass-wrap">
+        <div class="chart compass" data-chart="industryCompass" data-src="industries.json" data-status-in=".compass-note"></div>
+        <div class="compass-note">
+          <p>点击扇区跳转到对应行业。罗盘按三次产业着色：</p>
+          <ul class="legend-list">
+            <li><i style="background:var(--c-green)"></i>第一产业</li>
+            <li><i style="background:var(--c-blue)"></i>第二产业</li>
+            <li><i style="background:var(--c-ochre)"></i>第三产业</li>
+          </ul>
+        </div>
+      </div>
+      <div class="ind-wall" id="ind-wall"></div>
+      <nav class="ind-rail" id="ind-rail" aria-label="行业导航"></nav>
+      <div class="ind-body" id="ind-body"></div>
+    </section>
+
+    <!-- ===================== 第四章 ===================== -->
+    <section class="chapter" id="ch4" data-page="04">
+      <div class="chapter-head">
+        <div class="vtitle-col">
+          <span class="chapter-no">04</span>
+          <h2 class="vtitle ink-title">汇聚：一场整体重塑</h2>
+          <p class="vsub">效率 · 要素 · 知识 · 结构</p>
+        </div>
+        <div class="lede columns-3" data-reveal>
+          <p>把二十个行业重新放回一张图上，会看到一个共同的规律：AI 并不是某个行业的专属工具，而是一种<b>通用目的技术</b>，像电力一样渗入每一个生产环节。</p>
+          <p>本章从生产效率、生产要素、知识生产、产业结构四个方面提炼整体影响，再直面它带来的风险与挑战。</p>
+        </div>
+      </div>
+
+      <article class="block" id="block-panel">
+        <div class="panel-blue" data-chart="impactPanel" data-src="impact_stats.json"></div>
+      </article>
+
+      <article class="block" id="block-heatmap">
+        <header class="block-head">
+          <span class="block-no">4.1</span>
+          <h3>行业 × 维度：AI 影响矩阵</h3>
+          <p>20 个行业门类在五个维度上的影响强度。点击列标题排序；悬停查看数值。</p>
+        </header>
+        <div class="chart chart--wide" data-chart="impactHeatmap" data-src="impact_matrix.json"></div>
+      </article>
+
+      <article class="block" id="block-risk">
+        <header class="block-head">
+          <span class="block-no">4.2</span>
+          <h3>天平的另一端：风险与挑战</h3>
+          <p>生产力跃迁从来不是没有代价的。就业冲击、能源消耗、信息安全与数字鸿沟，同样需要被看见。</p>
+        </header>
+        <div class="risk-grid">
+          <div class="chart risk-card" data-chart="riskEnergy" data-src="risk_energy.json"></div>
+          <div class="chart risk-card" data-chart="riskJobs" data-src="risk_jobs.json"></div>
+          <div class="risk-card risk-card--text" data-reveal>
+            <h4>深度伪造与信息安全</h4>
+            <p>生成式 AI 降低了伪造图像、声音与视频的门槛。我国已出台《生成式人工智能服务管理暂行办法》《人工智能生成合成内容标识办法》等规范。</p>
+          </div>
+          <div class="risk-card risk-card--text" data-reveal>
+            <h4>数字鸿沟</h4>
+            <p>技术红利在不同地区、年龄与行业之间分布并不均衡。让更多人“用得上、用得好”，是新质生产力走向普惠的前提。</p>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <!-- ===================== 第五章 ===================== -->
+    <section class="chapter" id="ch5" data-page="05">
+      <div class="chapter-head">
+        <div class="vtitle-col">
+          <span class="chapter-no">05</span>
+          <h2 class="vtitle ink-title">回到我：人机协同</h2>
+          <p class="vsub">AI 接入我的生活</p>
+        </div>
+        <div class="lede columns-3" data-reveal>
+          <p>宏大的生产力叙事，最终会落到每一个人的一天里。</p>
+          <p>在这一章，你可以把 AI “接入”自己的一天，看看时间如何被重新分配；再选择一个职业，模拟它在 2030 年的任务构成；最后，写下属于你的人机协同宣言。</p>
+        </div>
+      </div>
+
+      <article class="block block--split" id="block-clock">
+        <div>
+          <header class="block-head">
+            <span class="block-no">5.1</span>
+            <h3>AI 接入我的一天</h3>
+            <p>选择你的身份，再点击“接入 AI”，观察 24 小时如何被重新分配。</p>
+          </header>
+          <div class="seg seg--stack" id="clock-roles"></div>
+          <button class="btn-stamp" id="clock-toggle">接入 AI</button>
+          <div class="clock-delta" id="clock-delta"></div>
+        </div>
+        <div class="chart chart--square" data-chart="dayClock" data-src="day_clock.json"></div>
+      </article>
+
+      <article class="block block--split" id="block-job">
+        <div>
+          <header class="block-head">
+            <span class="block-no">5.2</span>
+            <h3>未来工作模拟器</h3>
+            <p>选择一个职业，查看它的任务被 AI <em class="t-red">替代</em>、<em class="t-blue">增强</em>或<em class="t-ochre">保留</em>的比例。点击扇区可以下钻。</p>
+          </header>
+          <div class="seg seg--stack" id="job-select"></div>
+          <div class="job-summary" id="job-summary"></div>
+        </div>
+        <div class="chart chart--square" data-chart="jobSunburst" data-src="job_tasks.json"></div>
+      </article>
+
+      <article class="block block--split" id="block-card">
+        <div>
+          <header class="block-head">
+            <span class="block-no">5.3</span>
+            <h3>我的人机协同宣言</h3>
+            <p>写下你的名字，选择三个关键词，生成一张可下载的报纸版面卡片。</p>
+          </header>
+          <form class="card-form" id="card-form" autocomplete="off">
+            <label>名字<input name="name" maxlength="12" placeholder="例如：小明" /></label>
+            <fieldset id="card-words"><legend>选择三个关键词</legend></fieldset>
+            <button class="btn-stamp" type="submit">生成卡片</button>
+            <button class="btn-line" type="button" id="card-download" disabled>下载 PNG</button>
+          </form>
+        </div>
+        <div class="card-preview"><canvas id="card-canvas" width="900" height="1200"></canvas></div>
+      </article>
+
+      <div class="finale" id="finale">
+        <p class="finale__line ink-title">历史上的生产力跃迁</p>
+        <p class="finale__line ink-title">人工智能成为新质生产力的重要技术力量</p>
+        <p class="finale__line ink-title">二十大行业的真实变化</p>
+        <p class="finale__line ink-title finale__last">未来，属于人机协同</p>
+      </div>
+    </section>
+
+    <!-- ===================== 数据与方法 ===================== -->
+    <section class="chapter chapter--method" id="method" data-page="06">
+      <div class="method-head">
+        <h2 class="ink-title">数据与方法</h2>
+        <p>本站所有图表的数据来源、处理方式与核对状态。<span class="badge badge--ok">已核对</span><span class="badge badge--check">待核对</span><span class="badge badge--demo">示意数据</span></p>
+      </div>
+      <div class="method-table" id="method-table"></div>
+      <footer class="colophon">
+        <p>可视化导论 · 课程作业　|　技术：D3.js · three.js · GSAP · Lenis</p>
+      </footer>
+    </section>
+  </main>
+
+  <div class="tooltip" id="tooltip" role="tooltip"></div>
+</body>
+</html>

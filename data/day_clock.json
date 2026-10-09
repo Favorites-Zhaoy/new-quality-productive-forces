@@ -1,0 +1,40 @@
+{
+  "meta": {
+    "id": "day_clock",
+    "title": "AI 接入前后的一天（24 小时分配）",
+    "source": "本项目情景设定",
+    "url": "",
+    "status": "demo",
+    "note": "时间分配为情景演示。“重复性事务”的压缩比例参考 2.2 中效率维度的实验结果量级设定。",
+    "usedIn": "5.1 AI 接入我的一天"
+  },
+  "activities": [
+    { "key": "sleep",   "name": "睡眠",       "color": "--c-blue-soft" },
+    { "key": "commute", "name": "通勤",       "color": "--c-violet" },
+    { "key": "core",    "name": "核心学习/工作", "color": "--c-blue" },
+    { "key": "routine", "name": "重复性事务", "color": "--c-ochre" },
+    { "key": "create",  "name": "创造与思考", "color": "--c-teal" },
+    { "key": "ai",      "name": "与 AI 协作", "color": "--c-red" },
+    { "key": "life",    "name": "生活·运动·社交", "color": "--c-green" }
+  ],
+  "roles": [
+    {
+      "key": "student", "name": "大学生",
+      "routineEg": "查资料、整理笔记、调格式",
+      "before": { "sleep": 7.5, "commute": 1, "core": 6, "routine": 3.5, "create": 1, "ai": 0, "life": 5 },
+      "after":  { "sleep": 7.5, "commute": 1, "core": 6, "routine": 1, "create": 2, "ai": 1.5, "life": 5 }
+    },
+    {
+      "key": "office", "name": "上班族",
+      "routineEg": "写周报、填表格、整理会议纪要",
+      "before": { "sleep": 7, "commute": 1.5, "core": 5, "routine": 3.5, "create": 1, "ai": 0, "life": 6 },
+      "after":  { "sleep": 7, "commute": 1.5, "core": 4.5, "routine": 1, "create": 2, "ai": 1.5, "life": 6.5 }
+    },
+    {
+      "key": "designer", "name": "设计师",
+      "routineEg": "找素材、改尺寸、重复改稿",
+      "before": { "sleep": 7, "commute": 1, "core": 4, "routine": 4, "create": 2, "ai": 0, "life": 6 },
+      "after":  { "sleep": 7, "commute": 1, "core": 3.5, "routine": 1.5, "create": 3.5, "ai": 1.5, "life": 6 }
+    }
+  ]
+}

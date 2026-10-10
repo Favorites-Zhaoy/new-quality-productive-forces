@@ -9,8 +9,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&family=Noto+Serif+SC:wght@400;600;700;900&family=Noto+Sans+SC:wght@400;500;700&family=Cinzel:wght@400;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
-  <script type="module" crossorigin src="./assets/index-BGoqp43g.js"></script>
-  <link rel="stylesheet" crossorigin href="./assets/index-DCD-NLEK.css">
+  <script type="module" crossorigin src="./assets/index-B85Hp-FP.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/index-CTxjDgMJ.css">
 </head>
 <body>
   <!-- 油墨质感滤镜：给大标题加“印刷”边缘 -->
@@ -39,15 +39,23 @@
       <span class="topbar__rule"></span>
       <span class="topbar__page">第 <b id="page-no">00</b> 版</span>
     </div>
-    <nav class="topbar__nav" aria-label="章节导航">
-      <a href="#ch1" data-nav="ch1"><i>01</i>历史跃迁</a>
-      <a href="#ch2" data-nav="ch2"><i>02</i>驱动机制</a>
-      <a href="#ch3" data-nav="ch3"><i>03</i>行业重塑</a>
-      <a href="#ch4" data-nav="ch4"><i>04</i>整体影响</a>
-      <a href="#ch5" data-nav="ch5"><i>05</i>人机协同</a>
-    </nav>
     <div class="topbar__date" id="today"></div>
+    <button class="chapter-menu-toggle" id="chapter-menu-toggle" type="button" aria-controls="chapter-sidebar" aria-expanded="false">章节目录</button>
   </header>
+
+  <aside class="chapter-sidebar" id="chapter-sidebar" aria-label="页面目录">
+    <p class="chapter-sidebar__eyebrow">智能跃迁 / CONTENTS</p>
+    <nav class="chapter-sidebar__nav" aria-label="章节导航">
+      <a href="#hero" data-nav="hero"><i>00</i><span>序章</span></a>
+      <a href="#ch1" data-nav="ch1"><i>01</i><span>历史跃迁</span></a>
+      <a href="#ch2" data-nav="ch2"><i>02</i><span>驱动机制</span></a>
+      <a href="#ch3" data-nav="ch3"><i>03</i><span>行业重塑</span></a>
+      <a href="#ch4" data-nav="ch4"><i>04</i><span>整体影响</span></a>
+      <a href="#ch5" data-nav="ch5"><i>05</i><span>人机协同</span></a>
+      <a href="#method" data-nav="method"><i>06</i><span>数据与方法</span></a>
+    </nav>
+    <p class="chapter-sidebar__hint">选择章节，进入独立页面</p>
+  </aside>
 
   <main id="smooth">
 
@@ -65,7 +73,7 @@
       <ul class="hero__foot">
         <li>历史跃迁</li><li>驱动机制</li><li>行业重塑</li><li>整体影响</li><li>人机协同</li>
       </ul>
-      <div class="scroll-hint"><span>向下阅读</span><i></i></div>
+      <a class="scroll-hint" href="#ch1"><span>进入第一章</span><i></i></a>
     </section>
 
     <!-- ===================== 第一章 ===================== -->
@@ -301,10 +309,81 @@
           <p class="vsub">AI 接入我的生活</p>
         </div>
         <div class="lede columns-3" data-reveal>
-          <p>宏大的生产力叙事，最终会落到每一个人的一天里。</p>
-          <p>在这一章，你可以把 AI “接入”自己的一天，看看时间如何被重新分配；再选择一个职业，模拟它在 2030 年的任务构成；最后，写下属于你的人机协同宣言。</p>
+          <p>宏大的生产力叙事，最终会落到每一个人手里——字面意义上的“手里”。</p>
+          <p>先看看你手中那块屏幕的另一面；再把 AI “接入”自己的一天，模拟一个职业在 2030 年的任务构成；最后，留下一个值得自己回答的问题。</p>
         </div>
       </div>
+
+      <article class="vibe" id="vibe" aria-label="屏幕的另一面">
+        <div class="vibe__pin">
+          <div class="vibe__copy">
+            <span class="block-no vibe__no">5.0</span>
+            <div class="vibe__caps">
+              <div class="vibe__cap">
+                <h3>一部手机，背对着你</h3>
+                <p>每天，我们在这块屏幕上读新闻、点外卖、问 AI。它离我们太近，近到很少有人想过：屏幕的另一面在发生什么。</p>
+                <p class="vibe__hint">继续向下滚动，把它转过来 ↓</p>
+              </div>
+              <div class="vibe__cap">
+                <h3>转过来——</h3>
+                <p>屏幕亮了。上面不是新闻，也不是短视频，而是一段<b>对话</b>。</p>
+              </div>
+              <div class="vibe__cap">
+                <h3>一个人说，一个 AI 做</h3>
+                <p>人用中文提出需求、挑选数据、说“不好看”；AI 写代码、查资料、画图表、改版、上线。</p>
+                <p>通过对话完成 Web Coding：人提出方向并判断结果，AI 把想法写成网页。这种方式也常被称为 <b>Vibe Coding</b>。</p>
+              </div>
+              <div class="vibe__cap vibe__cap--punch">
+                <h3>是的，你正在看的这个网站，<br/>就是这样“聊”出来的。</h3>
+                <p>包括那条四百年的长卷，二十个行业的数据，以及被一句“太难看了”打回去重做的那一版。</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="vibe__stage">
+            <div class="vibe__scaler">
+              <div class="vibe__phone">
+                <div class="vibe__face vibe__face--front">
+                  <div class="vibe__device">
+                    <div class="vibe__screen">
+                      <div class="vibe__status"><span>9:41</span><i class="vibe__island"></i><span>5G ▮▮▮</span></div>
+                      <div class="vibe__app"><b>~/新质生产力</b><small>web coding · 对话中</small></div>
+                      <div class="vibe__chat"></div>
+                      <div class="vibe__input"><span>描述你想要的网站……</span><i>↑</i></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="vibe__face vibe__face--back">
+                  <div class="vibe__device vibe__device--back">
+                    <div class="vibe__cams"><i></i><i></i><i></i><b></b></div>
+                    <div class="vibe__brand">
+                      <span class="vibe__logo">智</span>
+                      <small>Designed by a conversation<br/>Built with D3.js</small>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <aside class="vibe__dict">
+            <p class="vibe__dict-word">vibe coding</p>
+            <p class="vibe__dict-ipa">/vaɪb ˈkəʊ.dɪŋ/ <i>n.</i></p>
+            <p class="vibe__dict-def">用自然语言向 AI 描述想要的效果，由 AI 生成、修改代码；人负责提出想法、判断好坏。</p>
+            <ul>
+              <li><b>2025.02</b>　Andrej Karpathy 首次提出这个说法</li>
+              <li><b>2025.11</b>　入选柯林斯词典年度词汇</li>
+            </ul>
+            <div class="vibe__ledger">
+              <p class="vibe__ledger-title">本站分工</p>
+              <dl>
+                <dt>人</dt><dd>定主题 · 挑数据 · 判断“好不好看” · 拍板</dd>
+                <dt>AI</dt><dd>查资料 · 写代码 · 画图表 · 部署上线</dd>
+              </dl>
+            </div>
+          </aside>
+        </div>
+      </article>
 
       <article class="block block--split" id="block-clock">
         <div>
@@ -333,36 +412,26 @@
         <div class="chart chart--square" data-chart="jobSunburst" data-src="job_tasks.json"></div>
       </article>
 
-      <article class="block block--split" id="block-card">
-        <div>
-          <header class="block-head">
-            <span class="block-no">5.3</span>
-            <h3>我的人机协同宣言</h3>
-            <p>写下你的名字，选择三个关键词，生成一张可下载的报纸版面卡片。</p>
-          </header>
-          <form class="card-form" id="card-form" autocomplete="off">
-            <label>名字<input name="name" maxlength="12" placeholder="例如：小明" /></label>
-            <fieldset id="card-words"><legend>选择三个关键词</legend></fieldset>
-            <button class="btn-stamp" type="submit">生成卡片</button>
-            <button class="btn-line" type="button" id="card-download" disabled>下载 PNG</button>
-          </form>
-        </div>
-        <div class="card-preview"><canvas id="card-canvas" width="900" height="1200"></canvas></div>
-      </article>
-
       <div class="finale" id="finale">
         <p class="finale__line ink-title">历史上的生产力跃迁</p>
         <p class="finale__line ink-title">人工智能成为新质生产力的重要技术力量</p>
         <p class="finale__line ink-title">二十大行业的真实变化</p>
         <p class="finale__line ink-title finale__last">未来，属于人机协同</p>
       </div>
+
+      <article class="vibe-q" id="vibe-q">
+        <p class="vibe-q__kicker">留给你的问题</p>
+        <h3 class="vibe-q__text ink-title">当一个网站可以被“聊”出来，
+什么，才是只有你能做的？</h3>
+        <p class="vibe-q__sub">代码和图表可以生成，但做什么、为什么做、怎样才算好，仍需要你来回答。带着这个问题，重新看一眼你手中的屏幕。</p>
+      </article>
     </section>
 
     <!-- ===================== 数据与方法 ===================== -->
     <section class="chapter chapter--method" id="method" data-page="06">
       <div class="method-head">
         <h2 class="ink-title">数据与方法</h2>
-        <p>本站所有图表的数据来源、处理方式与核对状态。<span class="badge badge--ok">已核对</span><span class="badge badge--check">待核对</span><span class="badge badge--demo">示意数据</span></p>
+        <p>本站所有图表的数据来源、使用位置与处理说明。</p>
       </div>
       <div class="method-table" id="method-table"></div>
       <footer class="colophon">

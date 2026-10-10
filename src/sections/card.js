@@ -40,13 +40,16 @@ export async function initCard() {
     ]);
   } catch { /* 字体失败时使用回退字体 */ }
 
+  let answer = '';
   const draw = () => {
     const name = (form.elements.name.value || '我').trim();
     const words = [...field.querySelectorAll('input:checked')].map((i) => i.value);
-    render(canvas, name, words.length ? words : WORDS.slice(0, 3));
+    render(canvas, name, words.length ? words : WORDS.slice(0, 3), answer);
     dl.disabled = false;
   };
   form.addEventListener('submit', (e) => { e.preventDefault(); draw(); });
+  // 5.0 的问题：读者的答案写进卡片
+  document.addEventListener('vibe-answer', (e) => { answer = e.detail; draw(); });
   dl.addEventListener('click', () => {
     const a = document.createElement('a');
     a.download = '人机协同宣言.png';
@@ -56,7 +59,7 @@ export async function initCard() {
   draw();
 }
 
-function render(cv, name, words) {
+function render(cv, name, words, answer) {
   const ctx = cv.getContext('2d');
   const W = cv.width, H = cv.height;
 
@@ -126,14 +129,28 @@ function render(cv, name, words) {
   ctx.fillStyle = C.ink;
   ctx.font = '28px "Noto Serif SC", serif';
   ctx.textAlign = 'left';
-  let y = 850;
+  let y = answer ? 830 : 850;
   words.slice(0, 3).forEach((w, i) => {
     ctx.fillStyle = C.red;
     ctx.fillText(`${'一二三'[i]}、`, 90, y);
     ctx.fillStyle = C.ink;
     ctx.fillText(LINES[w], 150, y);
-    y += 56;
+    y += answer ? 52 : 56;
   });
+
+  // 5.0 问题的答案
+  if (answer) {
+    ctx.strokeStyle = C.rule; ctx.lineWidth = 1;
+    line(ctx, 90, 958, W - 90, 958);
+    ctx.textAlign = 'center';
+    ctx.fillStyle = C.red;
+    ctx.font = '700 20px "Noto Sans SC", sans-serif';
+    ctx.fillText('当网站可以被“聊”出来，只有我能做的是——', W / 2, 1000);
+    ctx.fillStyle = C.blue;
+    ctx.font = '900 40px "Noto Serif SC", serif';
+    ctx.fillText(`“${answer}”`, W / 2, 1058, W - 160);
+    ctx.textAlign = 'left';
+  }
 
   // 页脚
   ctx.strokeStyle = C.rule; ctx.lineWidth = 1;

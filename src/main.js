@@ -9,6 +9,7 @@ import { initCard } from './sections/card.js';
 import { initMethod } from './sections/method.js';
 import { buildChapter3, initChapter3 } from './industry/chapter3.js';
 import { initEfficiency } from './sections/efficiency.js';
+import { initVibe } from './sections/vibe.js';
 
 import { timeline } from './charts/timeline.js';
 import { factorSankey } from './charts/factorSankey.js';
@@ -56,13 +57,24 @@ async function boot() {
     console.warn('WebGL 不可用，跳过粒子效果', err);
   }
 
-  initChapter1(particles); // 钉住区段按页面顺序创建：第一章 → 2.2 → 第三章
+  initChapter1(particles); // 钉住区段按页面顺序创建：第一章 → 2.2 → 第三章 → 第五章
   initEfficiency();
   initChapter3(inds, particles);
+  initVibe();
   initNav(lenis);
   initCard();
   initMethod();
   lazyCharts(CHARTS);
+
+  // 异步内容（行业数据、尺子、字体）撑高页面后，重新计算所有触发位置
+  let lastH = 0, rt = 0;
+  new ResizeObserver(() => {
+    const h = document.querySelector('main')?.offsetHeight ?? document.body.offsetHeight;
+    if (Math.abs(h - lastH) < 2) return;
+    lastH = h;
+    clearTimeout(rt);
+    rt = setTimeout(() => ScrollTrigger.refresh(), 300);
+  }).observe(document.querySelector('main') ?? document.body);
 
   if (particles) {
     const hero = () => {

@@ -1,0 +1,43 @@
+/* One visible chapter at a time, with a persistent table of contents. */
+:root { --sidebar-w: 218px; }
+main > section[hidden] { display: none !important; }
+main { margin-left: var(--sidebar-w); min-width: 0; }
+.topbar { left: var(--sidebar-w); }
+.topbar.is-hidden { transform: none; }
+.chapter-menu-toggle { display: none; }
+.chapter-sidebar {
+  position: fixed; inset: 0 auto 0 0; z-index: 55; width: var(--sidebar-w);
+  display: flex; flex-direction: column; padding: 32px 14px 24px;
+  background: var(--paper-2); border-right: 1px solid var(--rule);
+  font-family: var(--f-sans); color: var(--ink);
+}
+.chapter-sidebar__eyebrow { margin: 0 10px 34px; color: var(--ink-3); font-size: 10px; letter-spacing: .12em; }
+.chapter-sidebar__nav { display: grid; gap: 5px; }
+.chapter-sidebar__nav a {
+  display: flex; align-items: center; gap: 12px; padding: 12px 11px;
+  border-radius: 5px; color: var(--ink-2); text-decoration: none;
+  font-size: 14px; transition: background .2s, color .2s;
+}
+.chapter-sidebar__nav a i { font: 12px var(--f-mono); color: var(--ink-3); }
+.chapter-sidebar__nav a:hover { background: var(--paper-3); color: var(--ink); }
+.chapter-sidebar__nav a.is-active { background: var(--c-blue-deep); color: var(--paper-2); font-weight: 700; }
+.chapter-sidebar__nav a.is-active i { color: var(--c-blue-soft); }
+.chapter-sidebar__nav a:focus-visible, .chapter-menu-toggle:focus-visible { outline: 2px solid var(--c-red); outline-offset: 2px; }
+.chapter-sidebar__hint { margin: auto 10px 0; font-size: 11px; color: var(--ink-3); line-height: 1.6; }
+.ind-rail { left: calc(var(--sidebar-w) + 8px); }
+.vibe-q { margin-bottom: 2vh; }
+@media (max-width: 900px) {
+  :root { --sidebar-w: 0px; }
+  .topbar { left: 0; }
+  .topbar__date { display: none; }
+  .chapter-menu-toggle {
+    display: inline-flex; align-items: center; justify-content: center;
+    border: 1px solid var(--rule-strong); border-radius: 4px;
+    padding: 7px 10px; background: var(--paper-2); color: var(--ink);
+    font: 13px var(--f-sans); cursor: pointer;
+  }
+  .chapter-sidebar { width: min(300px, 82vw); top: var(--topbar-h); bottom: 0; padding-top: 20px; transform: translateX(-101%); transition: transform .25s ease; box-shadow: 12px 0 28px rgba(34,48,60,.08); }
+  .chapter-sidebar.is-open { transform: none; }
+  .chapter-sidebar__eyebrow { margin-bottom: 16px; }
+  .ind-rail { left: 8px; }
+}

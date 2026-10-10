@@ -1,5 +1,5 @@
 /* =========================================================
-   5.0 屏幕的另一面：手 + 手机 3D 翻转 · Vibe Coding 对话 · 一个问题
+   5.0 屏幕的另一面：手机 3D 翻转 · Web Coding 对话 · 一个问题
    ========================================================= */
 
 .vibe { position: relative; margin: 0 calc(-1 * var(--gutter)) 2vh; }
@@ -35,13 +35,6 @@
 .vibe__phone { position: absolute; inset: 0; transform-style: preserve-3d; will-change: transform; }
 .vibe__face { position: absolute; inset: 0; backface-visibility: hidden; -webkit-backface-visibility: hidden; }
 .vibe__face--back { transform: rotateY(180deg); }
-.vibe__hand {
-  position: absolute; inset: 0; width: 100%; height: 100%; z-index: 0; overflow: visible;
-  /* 手腕向下渐隐，不留生硬的截断线 */
-  -webkit-mask-image: linear-gradient(to bottom, #000 82%, transparent 99%); mask-image: linear-gradient(to bottom, #000 82%, transparent 99%);
-}
-.vibe__hand--over { z-index: 2; pointer-events: none; }
-
 .vibe__device {
   position: absolute; left: 50px; top: 24px; width: 260px; height: 560px; z-index: 1;
   border-radius: 40px; padding: 9px;
@@ -138,10 +131,10 @@
 .vibe__ledger dt:nth-of-type(2) { background: var(--c-blue-deep); }
 .vibe__ledger dd { margin: 0; font-family: var(--f-sans); font-size: 13px; line-height: 1.6; color: var(--ink); }
 
-/* ---------- 一个问题 ---------- */
+/* ---------- 章末问题 ---------- */
 .vibe-q {
-  margin: 0 auto 10vh; padding: 9vh 0 7vh; max-width: 980px; text-align: center;
-  border-top: 3px double var(--rule-strong); border-bottom: 1px solid var(--rule);
+  margin: 0 auto 10vh; padding: 10vh 0 8vh; max-width: 980px; text-align: center;
+  border-top: 3px double var(--rule-strong);
 }
 .vibe-q__kicker {
   display: inline-block; margin: 0 0 22px; padding: 3px 14px; border-radius: 3px;
@@ -150,22 +143,6 @@
 .vibe-q__text { margin: 0 0 22px; font-size: clamp(30px, 4.6vw, 64px); line-height: 1.35; color: var(--ink); }
 .vibe-q__text .qc { display: inline-block; }
 .vibe-q__sub { max-width: 40em; margin: 0 auto 30px; font-family: var(--f-serif); font-size: 16px; line-height: 1.85; color: var(--ink-2); }
-.vibe-q__form { display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; }
-.vibe-q__form input {
-  width: min(460px, 100%); padding: 12px 4px; border: 0; border-bottom: 2px solid var(--ink); background: transparent;
-  font-family: var(--f-serif); font-size: 20px; color: var(--ink); text-align: center; outline: none;
-}
-.vibe-q__form input:focus { border-color: var(--c-red); }
-.vibe-q__chips { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 8px; margin-top: 20px; }
-.vibe-q__chips span { font-family: var(--f-sans); font-size: 13px; color: var(--ink-3); }
-.vibe-q__chips button {
-  font-family: var(--f-sans); font-size: 13px; color: var(--ink-2); background: var(--paper-2);
-  border: 1px dashed var(--rule-strong); border-radius: 20px; padding: 4px 12px; cursor: pointer;
-}
-.vibe-q__chips button:hover { color: var(--c-red); border-color: var(--c-red); }
-.vibe-q__ok { min-height: 1.6em; margin: 14px 0 0; font-family: var(--f-sans); font-size: 14px; color: var(--c-teal); }
-.vibe-q__ok a { color: var(--c-red); font-weight: 700; }
-
 @media (max-width: 1080px) {
   .vibe__pin { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
   .vibe__dict { display: none; }

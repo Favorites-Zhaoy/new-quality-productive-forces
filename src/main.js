@@ -1,11 +1,11 @@
 // 入口：加载 → 平滑滚动 → 粒子 → 章节 → 懒加载图表
 import { initScroll, gsap, ScrollTrigger } from './core/scroll.js';
 import { initNav } from './core/nav.js';
+import { initPages } from './core/pages.js';
 import { heroIntro, initReveals } from './core/reveal.js';
 import { lazyCharts } from './core/lazy.js';
 import { ParticleField } from './three/particles.js';
 import { initChapter1 } from './sections/chapter1.js';
-import { initCard } from './sections/card.js';
 import { initMethod } from './sections/method.js';
 import { buildChapter3, initChapter3 } from './industry/chapter3.js';
 import { initEfficiency } from './sections/efficiency.js';
@@ -61,8 +61,6 @@ async function boot() {
   initEfficiency();
   initChapter3(inds, particles);
   initVibe();
-  initNav(lenis);
-  initCard();
   initMethod();
   lazyCharts(CHARTS);
 
@@ -101,6 +99,21 @@ async function boot() {
     });
   }
 
+  initReveals();
+  const setCurrent = initNav(lenis);
+  initPages(lenis, setCurrent, (page, previous) => {
+    if (!particles) return;
+    if (page.id === 'hero') {
+      particles.morphTo('sphere');
+      particles.anchor(null, 1.15);
+      particles.setSpin(0.06);
+      if (previous) particles.show(true, 1, 0.55, 'hero');
+    } else {
+      // 切章先清掉上一页的粒子；第五章结尾的 ScrollTrigger 会再自行点亮。
+      particles.show(false, 0.2);
+    }
+  });
+
   // 收起加载层
   gsap.to(bar, { width: '100%', duration: 0.4 });
   gsap.to('#loader', {
@@ -108,9 +121,10 @@ async function boot() {
     onComplete: () => document.getElementById('loader').remove(),
   });
   gsap.delayedCall(0.6, () => {
-    heroIntro();
-    if (window.scrollY < window.innerHeight) particles?.show(true, 2.4, 0.55, 'hero');
-    initReveals();
+    if (document.body.dataset.page === 'hero') {
+      heroIntro();
+      if (window.scrollY < window.innerHeight) particles?.show(true, 2.4, 0.55, 'hero');
+    }
     lenis.start();
   });
 }

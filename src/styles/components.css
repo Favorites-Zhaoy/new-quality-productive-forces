@@ -122,39 +122,14 @@
 .job-summary b { display: block; font-size: 26px; line-height: 1.2; }
 .job-summary span { font-family: var(--f-sans); font-size: 12px; color: var(--ink-2); }
 
-.card-form { display: grid; gap: 18px; font-family: var(--f-sans); font-size: 14px; }
-.card-form label { display: grid; gap: 6px; color: var(--ink-2); }
-.card-form input[name="name"] {
-  border: 0; border-bottom: 2px solid var(--ink); background: transparent; padding: 8px 2px;
-  font-family: var(--f-serif); font-size: 22px; outline: none;
-}
-.card-form fieldset { border: 0; padding: 0; margin: 0; display: flex; flex-wrap: wrap; gap: 8px; }
-.card-form legend { color: var(--ink-2); margin-bottom: 8px; }
-.word-chip input { position: absolute; opacity: 0; pointer-events: none; }
-.word-chip span {
-  display: inline-block; padding: 6px 14px; border-radius: 999px;
-  border: 1px solid var(--rule-strong); cursor: pointer; transition: all .25s;
-}
-.word-chip input:checked + span { background: var(--c-blue-deep); border-color: var(--c-blue-deep); color: var(--paper-2); }
-.word-chip input:focus-visible + span { outline: 2px solid var(--c-red); outline-offset: 2px; }
-.card-form .btn-stamp, .card-form .btn-line { justify-self: start; }
-.card-form > div, .card-form > button { margin-right: 10px; }
-.card-preview { display: grid; place-items: center; }
-.card-preview canvas {
-  width: min(100%, 440px); height: auto; border-radius: 4px;
-  box-shadow: 0 1px 0 var(--rule), 0 24px 48px -24px rgba(34,48,60,.35);
-  transform: rotate(1.2deg);
-}
-
 /* ================= 方法表 ================= */
 .method-table { margin-top: 32px; font-family: var(--f-sans); font-size: 13.5px; overflow-x: auto; }
 .method-table table { width: 100%; border-collapse: collapse; min-width: 720px; }
 .method-table th, .method-table td { text-align: left; padding: 12px 10px; border-bottom: 1px solid var(--rule); vertical-align: top; }
 .method-table th { font-weight: 700; color: var(--ink-2); border-bottom: 2px solid var(--ink); }
-.method-table th:nth-child(1) { width: 15%; }
-.method-table th:nth-child(2) { width: 22%; }
-.method-table th:nth-child(3) { width: 27%; }
-.method-table th:nth-child(4) { width: 9%; }
+.method-table th:nth-child(1) { width: 17%; }
+.method-table th:nth-child(2) { width: 25%; }
+.method-table th:nth-child(3) { width: 30%; }
 .method-table td:first-child { font-family: var(--f-mono); font-size: 12.5px; color: var(--ink-2); }
 .method-table a { color: var(--c-blue-deep); }
 

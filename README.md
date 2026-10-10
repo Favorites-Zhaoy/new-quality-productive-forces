@@ -10,18 +10,20 @@ npm run dev      # 本地开发 http://localhost:5173
 npm run build    # 打包到 dist/，可直接部署到 GitHub Pages / Vercel
 ```
 
+左侧目录在序章、五个章节和「数据与方法」之间切换；窄屏使用右上角「章节目录」。每次只展示当前章节，章节内部仍可滚动查看长卷与交互图表。链接中的 `#ch1`—`#ch5` 可以直接打开对应章节，浏览器前进与返回同样适用。
+
 ## 目录
 
 ```
-index.html                 页面结构（序章 + 五章 + 数据与方法）
+index.html                 页面结构（序章 + 五章 + 数据与方法，各章单独切换）
 data/raw/                  原始数据文件（Maddison 数据库、统计年鉴表格图片与转录 CSV）
 data/scripts/              原始数据 → public/data 的处理脚本
 public/data/*.json         网页使用的数据，每个文件带 meta（来源、链接、核对状态）
 src/
-  main.js                  入口：加载层、平滑滚动、粒子、懒加载图表
-  core/                    滚动(Lenis+ScrollTrigger)、数据、提示框、懒加载、入场动画、报头导航
+  main.js                  入口：加载层、章节切换、平滑滚动、粒子、懒加载图表
+  core/                    章节路由、滚动(Lenis+ScrollTrigger)、数据、提示框、懒加载、入场动画
   three/                   “生产力粒子”：shapes.js 画形状 → particles.js 着色器变形
-  sections/                第一章（长卷、过场、四个时代、迁徙）、宣言卡片、数据与方法表
+  sections/                第一章（长卷、过场、四个时代、迁徙）、第五章手机场景、数据与方法表
   industry/                第三章：页面生成与图表组件库
   charts/                  每个 D3 图表一个文件
   styles/                  tokens.css（配色/字体变量）→ base → layout → components → charts
@@ -40,7 +42,7 @@ src/
 | 2.2 | 五维度：对照条形图 / 力导向图谱 / 点阵 / 多智能体网络 / 闭环 | `charts/fiveDims.js` |
 | 3 | 行业罗盘、二十个数字、20 个行业三层版面（16 种图表组件） | `industry/chapter3.js`、`industry/kit.js` |
 | 4 | 数据版块、影响热力矩阵、能耗柱图、就业华夫图 | `charts/impactPanel.js` 等 |
-| 5 | 24 小时径向时钟、职业旭日图、宣言卡片 | `charts/dayClock.js` 等 |
+| 5 | 手机翻转与建站对话、24 小时径向时钟、职业旭日图、章末问题 | `sections/vibe.js`、`charts/dayClock.js` 等 |
 
 ## 第一章数据
 
